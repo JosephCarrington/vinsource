@@ -1,0 +1,1929 @@
+/*
+Theme Name: Vinsource
+Author: Joseph Carrington and Jennifer Meller
+*/
+/* Reset! Weird we still have to do this, no? */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* Hack for mobile w/ slideshow etc */
+@media all and (max-width: 960px)
+{
+	body
+	{
+		width: 960px;
+		margin: auto;
+	}
+}
+
+/* Type */
+html
+{
+	background-color: #333;
+}
+
+body
+{
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+	color: #595959;
+	font-smooth:always;
+	-webkit-font-smoothing: antialiased;
+
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+a:link,
+a:visited
+{
+	color: #595959;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+p
+{
+	margin-bottom: 1em;
+	line-height: 1.2em;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+h2
+{
+	color: #AB0C00;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+h3
+{
+	margin-bottom: 1em;
+	font-weight: bold;
+	color: #AB0C00;
+}
+
+
+/* Header */
+#site_header_wrapper
+{
+	background: transparent url('images/header_bg.png') repeat-x bottom center;
+}
+
+#site_header
+{
+	margin: 0 auto 0;
+	padding:  1em 0 9px;
+	width: 960px;
+	height: 56px;
+	position: relative;
+}
+
+#logo
+{
+	float: left;
+}
+
+#site_header .menu
+{
+	margin-top: 35px;
+}
+
+#site_header .menu-item
+{
+	text-transform: uppercase;
+	margin-right: 20px;
+	font-size: 12px;
+	float: left;
+}
+
+.menu-item a:link,
+.menu-item a:visited
+{
+	text-decoration: none;
+	color: #595959;
+}
+
+.current-menu-item a:link,
+.current-menu-item a:visited,
+.menu-item a:hover,
+.post-type-archive-vs_product #browse a,
+.post-type-archive-vs_transaction #my_account a
+{
+	color: #AB0C00;	
+	padding-bottom: 12px;
+	border-bottom: 5px solid #AB0C00;
+}
+
+.menu-logged-in-buyers-container,
+#wine-nav
+{
+	float: left;
+}
+
+#banner_wrapper
+{
+	overflow: hidden;
+	text-align: center;
+}
+
+/* Content */
+#content
+{
+	width: 924px;
+	padding: 18px;
+	margin: -1em auto auto;
+	background: white;
+	position: relative;
+	z-index: 4;
+	overflow: auto;
+
+	-webkit-box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+        box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+#left_wrapper,
+#bid_info
+{
+	width: 538px;
+	float: left;
+	line-height: 1.25em;
+}
+
+#front_news,
+#how_it_works
+{
+	margin-bottom: 2em;
+}
+
+#content header,
+.gform_title
+{
+	padding: 0.75em;
+	font-size: 18pt;
+	border: 1px solid #e3e3e3;
+	background-color: #f1f1f1;
+	text-transform: uppercase;
+	line-height: 1em;
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+header em
+{
+}
+
+#front_news aside,
+.blog_excerpt_date,
+#single_blog_date
+{
+	margin: 1em;
+	color: #999;
+}
+
+.blog_excerpt p,
+.single_blog p
+{
+	margin-left: 1em;
+}
+
+.news_content,
+#how_it_works_content
+{
+	padding: 0 1em;
+	overflow: auto;
+}
+
+#how_it_works_content
+{
+	margin-top: 1em;
+}
+
+.HIW_area
+{
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-bottom: 2em;
+
+}
+
+.HIW_image
+{
+	background-color: #595959;
+	color: white;
+	padding: 0.25em;
+	text-transform: uppercase;
+	font-size: 2em;
+	line-height: 1em;
+	float: left;
+	margin-right: 0.5em;
+}
+
+.HIW_image span
+{
+	display: block;
+}
+
+.HIW_blurb
+{
+	margin-top: 1em;
+}
+
+/* Login stuff */
+#log_me_in,
+#registration_sidebar,
+#blog_archive_sidebar,
+#single_blog_sidebar
+{
+	float: right;
+	width: 350px;
+	line-height: 1em;
+}
+
+#login
+{
+	background-color: #999;
+	padding: 18pt 9pt;
+	border: 1px solid #7c7c7c;
+	margin-bottom: 1em;
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#login h3
+{
+	text-transform: uppercase;
+	font-size: 18pt;
+	color: #ddd;
+}
+
+#login h3 em
+{
+	color: white;
+}
+
+#login input
+{
+	display: block;
+	margin-bottom: 0.5em;
+	font-size: 12pt;
+	width: 268px;
+	border: none;
+	padding: 0.25em;
+	color: #595959;
+}
+
+input::-webkit-input-placeholder {
+    color:    #595959;
+}
+input:-moz-placeholder {
+    color:    #595959;
+}
+input:-ms-input-placeholder {
+    color:    #595959;
+}
+
+#loginform p
+{
+	margin-bottom: 0;
+}
+
+.login-remember
+{
+	overflow: auto;
+	margin: 0.5em 0;
+	font-size: 0.9em;
+}
+
+#login #rememberme
+{
+	float: left;
+	width: auto;
+	padding: 0;
+	margin: 0 0.5em 0.5em 0;
+	border: 1px solid #c1c1c1;
+	background-color: #acacac;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+#login label
+{
+	color: white;
+}
+
+#register h3,
+#bid_button h3,
+#view_bid_button h3
+{
+	color: white;
+}
+
+
+#login #submit
+{
+	background: transparent url('images/login.png') left center no-repeat;
+	height: 40px;
+}
+
+#login a:link,
+#login a:visited
+{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding-left: 1em;
+	background: transparent url('images/link_arrow.png') left 4px  no-repeat;
+	margin-bottom: 0.5em;
+}
+
+#login a:hover
+{
+	text-decoration: underline;
+}
+
+#register,
+#bid_button,
+#view_bid_button
+{
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 1px solid #801314;
+	overflow: auto;
+	
+
+	background: #801314; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(top,  #b47475 0%, #801314 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b47475), color-stop(100%,#801314)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b47475 0%,#801314 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b47475 0%,#801314 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b47475 0%,#801314 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b47475 0%,#801314 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b47475', endColorstr='#801314',GradientType=0 ); /* IE6-8 */
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#bid_button,
+.pm_spilt_payment_button_wrapper .split_payment_button
+{
+	
+	border: 1px solid #2351A2;
+
+	background: #2b72bb; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2b72bb 0%, #2351a2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2b72bb), color-stop(100%,#2351a2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2b72bb 0%,#2351a2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2b72bb 0%,#2351a2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2b72bb 0%,#2351a2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2b72bb 0%,#2351a2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b72bb', endColorstr='#2351a2',GradientType=0 ); /* IE6-9 */
+}
+
+
+#view_bid_button
+{
+	border-color: #3B9000;
+
+	background: rgb(80,221,6); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(80,221,6,1) 0%, rgba(59,144,0,1) 22%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(80,221,6,1)), color-stop(22%,rgba(59,144,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(80,221,6,1) 0%,rgba(59,144,0,1) 22%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(80,221,6,1) 0%,rgba(59,144,0,1) 22%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(80,221,6,1) 0%,rgba(59,144,0,1) 22%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(80,221,6,1) 0%,rgba(59,144,0,1) 22%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50dd06', endColorstr='#3b9000',GradientType=0 ); /* IE6-9 */
+}
+
+
+#register:hover
+{
+	background: #b47475; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(top,  #801314 0%, #b47475 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#801314), color-stop(100%,#b47475)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #801314 0%,#b47475 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #801314 0%,#b47475 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #801314 0%,#b47475 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #801314 0%,#b47475 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801314', endColorstr='#b47475',GradientType=0 ); /* IE6-8 */
+}
+
+
+#register a,
+#bid_button,
+#view_bid_button
+{
+	text-decoration: none;
+}
+
+#register h3,
+#bid_button h3,
+#view_bid_button h3
+{
+	float: left;
+	margin: 18px 20px 0 0;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.logout_section
+{
+	padding: 0.5em;
+	border: 1px solid #e3e3e3;
+	margin-bottom: 1em;
+	background-color: #999;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* Registration page */
+
+.page-id-31 .gform_wrapper
+{
+	padding-left: 15px;
+}
+
+.gform_wrapper .textarea.medium
+{
+	font-size: 1.2em;
+}
+
+.page .gform_wrapper h3.gform_title
+{
+	font-weight: 400;
+	color: #AB0C00;
+}
+
+.page .gform_wrapper h2.gsection_title
+{
+	color: #595959;
+	text-transform: uppercase;
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+.page .gform_wrapper .gsection
+{
+	border: none;
+	margin-top: 2em;
+}
+
+.gform_wrapper label,
+.gform_wrapper input
+{
+	font-size: 16px !important;
+}
+
+.page .gform_wrapper .top_label .gfield_label
+{
+	font-weight: 400;
+}
+
+.page-id-31 #register
+{
+	display: none;
+}
+
+.page-id-31 #login
+{
+	width: 275px;
+	float: right;
+}
+	
+/* Blog Archive Page */
+.category .widget_recent_entries
+{
+	margin-bottom: 1em;
+}
+
+/* Slideshow */
+#slides_wrapper
+{
+	height: 290px;
+}
+
+#slides
+{
+	position: relative;
+}
+
+.slide
+{
+	position: absolute;
+	height: 290px;
+	width: 100%;
+}
+
+.slide_bg
+{
+	height: 290px;
+}
+
+.headline_container
+{
+	background-color: rgba(0,0,0,0.26);
+	position: absolute;
+	top: 93px;
+	width: 100%;
+}
+
+.headline_subcontainer
+{
+	width: 600px;
+	margin: auto;
+	padding-left: 360px;
+}
+
+.headline_subcontainer h2
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 82px;
+	margin-bottom: 0;
+	text-shadow: -2px 2px 0 rgba(0,0,0,0.82);
+	filter: dropshadow(color=#000, offx=2, offy=2);
+}
+
+.slide_image_wrapper
+{
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	z-index: 3;
+}
+
+.slide_image
+{
+	width: 960px;
+	margin: auto;
+}
+
+.slide_image img
+{
+	border: 15px solid white;
+	border: 15px solid rgba(256,256,256, 0.37);
+}
+
+.blurb_container
+{
+	position: absolute;
+	top: 190px;
+	width: 100%;
+}
+
+.blurb
+{
+	width: 600px;
+	margin: auto;
+	padding-left: 360px;
+	color: white;
+	font-size: 18px;
+	font-style: oblique;
+
+	text-shadow: -2px 2px 0 rgba(0,0,0,0.82);
+	filter: dropshadow(color=#000, offx=2, offy=2);
+}
+
+/* Browsing */
+#loading_gif
+{
+	display: block;
+	margin: 120px auto 0;
+}
+
+#winery_browser,
+#wine_browser
+{
+	border: 1px solid #ccc;
+	overflow: auto;
+	margin-bottom: 1em;
+	text-align: center;
+
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#winery_browser_wrapper,
+#wine_browser_wrapper
+{
+	position: relative;
+}
+
+#winery_browser
+{
+	height: 160px;
+}
+
+.winery_group
+{
+	background-color: white;
+	width: 902px;
+	margin: 13px 10px;
+}
+
+.wine_group
+{
+	margin: 13px 10px;
+	background-color: white;
+	width: 862px;
+	padding-left: 40px;
+}
+
+#previous_wineries,
+#next_wineries,
+#previous_wines,
+#next_wines
+{
+	position: absolute;
+	top: 40px;
+	z-index: 10;
+}
+
+#previous_wineries,
+#next_wineries
+{
+	display: none;
+}
+
+#previous_wines,
+#next_wines
+{
+	top: 115px;
+	display: none;
+}
+
+#previous_wineries,
+#previous_wines
+
+{
+	left: 1em;
+}
+
+#next_wineries,
+#next_wines
+{
+	right: 1em;
+}
+
+.winery_link
+{
+	display: table-cell;
+	width: 149px;
+	height: 132px;
+	vertical-align: middle;
+}
+
+
+#winery_browser .winery
+{
+	width: 147px;
+	height: 130px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.5em;
+
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid transparent;
+}
+
+
+#wine_browser
+{
+	min-height: 296px;
+}
+
+#wine_browser .wine
+{
+	width: 200px;
+	height: 255px;
+	float: left;
+	overflow: auto;
+	margin-right: 1px;
+
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid transparent;
+}
+
+#winery_browser .active_winery,
+#wine_browser .active_wine
+{
+	border-color: #ab0c0c;
+}
+
+#wine_browser .wine_logo
+{
+	float: left;
+}
+
+.wine_info
+{
+	text-align: left;
+}
+
+#wine_browser .wine_link:link
+{
+	text-decoration: none;
+	line-height: 1.25em;
+}
+
+#wine_browser .wine_name
+{
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+#wine_data_title
+{
+	font-size: 1.75em;
+	color: #AB0C00;
+	margin-bottoM: 1em;
+}
+
+#wine_data, #below_bid_button
+{
+	width: 660px;
+	float: left;
+	padding-left: 15px;
+}
+
+.single #wine_data
+{
+	float: none;
+	margin-top: 2em;
+	padding-left: 0;
+}
+
+#wine_data .label
+{
+	font-weight: bold;
+}
+
+#wine_data .wine_title
+{
+	color: black;
+	margin-bottom: 1em;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.wine_case_price_discount_and_no_discount
+{
+	overflow: auto;
+	line-height: 1.5em;
+}
+
+.wine_case_price_discount_and_no_discount li
+{
+	float: left;
+	margin-right: 1em;
+}
+
+.single .wine_title
+{
+	color: black;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+.single #wine_data .wine_title,
+.single #wine_data .wine_case_price,
+.single #wine_data #wine_data_srp
+{
+	display: none;
+}
+
+#wine_data .wine_case_price
+{
+	margin-bottom: 1em;
+}
+
+#wine_data .wine_case_price em
+{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#wine_data_description,
+#wine_data_varietal,
+#wine_data_case
+{
+	margin-bottom: 1em;
+}
+
+#wine_data_country .label,
+#wine_data_state .label,
+#wine_data_region .label,
+#wine_data_appelation .label
+{
+	float: left;
+	margin-right: 0.5em;
+}
+
+#wine_data_country ul,
+#wine_data_state ul,
+#wine_data_region ul,
+#wine_data_appelation ul
+{
+	overflow: auto;
+	height: 1.25em;
+}
+
+#wine_data_srp
+{
+	font-size: 2em;
+	color: #AB0C00;
+	margin-top: 0.5em;
+}
+
+#bid_button,
+#view_bid_button
+
+{
+	display: block;
+	width: 312px;
+	float: left;
+	margin-top: 2em;
+	margin-left: 15px;
+}
+
+#bid_button h3,
+#view_bid_button h3
+{
+	font-size: 1.25em;
+	vertical-align: middle;
+	margin-top: 12px;
+	margin-left: 20px;
+}
+
+#bid_button img,
+#view_bid_button img
+{
+	width: 40px;
+	height: 40px;
+	float: right;
+}
+
+#below_bid_button
+{
+	font-size: 0.85em;
+}
+
+#below_bid_button li
+{
+	width: 400px;
+}
+
+/* Single wine page */
+#wine_info_on_bid
+{
+	padding-left: 15px;
+}
+
+#single_wine_top
+{
+	margin: 1em 0;
+}
+
+#single_wine_info #wine_title
+{
+	font-size: 1.75em;
+	color: #595959;
+	margin-bottom: 1em;
+}
+
+#srp
+{
+	display: none;
+}
+
+#case_select
+{
+	margin-bottom: 1em;
+}
+
+#total_feedback
+{
+	background: #dbdee1;
+	width: 256px;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.single-wine #total_feedback
+{
+	display: none;
+}
+
+#shipping_notice
+{
+	font-style: italic;
+	color: #AB0C00;
+}
+
+#total,
+#price_offer
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+#total
+{
+	color: #AB0C00;
+}
+
+#price_offer select
+{
+	vertical-align: middle;
+}
+
+#total_by_case li,
+#total_by_bottle li
+{
+	display: inline-block;
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+#price_feedback
+{
+	line-height: 1.25em;
+	margin-bottom: 1em;
+}
+
+#case_select label
+{
+	font-size: 1.5em;
+}
+
+#total_cases,
+#total_price_per_case,
+#total_bottles,
+#total_price_per_bottle
+{
+	color: black;
+}
+
+#bid_submit
+{
+	margin-bottom: 1em;
+}
+
+#bid_submit_image
+{
+	background: transparent url('images/send_offer_button.png') no-repeat top left;
+	width: 229px;
+	height: 36px;
+	cursor: pointer;
+	margin-top: 1em;
+}
+
+.single #wine_data
+{
+	width: 450px;
+	line-height: 1.25em;
+}
+
+.single-wine #wine_data
+{
+	padding-left: 0;
+}
+
+.single-wine #wine_data_title
+{
+	display: none;
+}
+
+.single-wine #wine_title
+{
+	color: #AB0C00;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.1em;
+	margin-bottom: 0.75em;
+}
+
+.single-wine #wine_data_srp
+{
+	display: none;
+}
+
+/* Buy Now Section */
+.pm_split_payment_header
+{
+	overflow: auto;
+	margin-bottom: 1em;
+}
+
+.pm_split_payment_header .case_amount
+{
+	float: left;
+	font-size: 0.75em;
+}
+
+.pm_split_payment_header .show_discount_wrapper
+{
+	float: right;
+}
+
+.pm_split_payment_header .show_discount_wrapper a:link,
+.pm_split_payment_header .show_discount_wrapper a:visited
+{
+	text-decoration: none;
+}
+
+.pm_split_payment_header .case_amount em
+{
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+}
+
+.vs_bulk_prices
+{
+	border-collapse: collapse;
+	display: none;
+	margin-bottom: 1em;
+}
+
+.vs_bulk_prices, .vs_bulk_prices td, .vs_bulk_prices th
+{
+	text-align: center;
+	border: 1px solid #e3e3e3;
+}
+
+.vs_bulk_prices th
+{
+	font-weight: bold;
+}
+
+.vs_bulk_prices th, .vs_bulk_prices td
+{
+	padding: 0.1em 1em;
+}
+
+.vs_bulk_prices th[scope=row]
+{
+	text-align: right;
+}
+
+.pm_split_payment_case_select_and_buttons
+{
+	padding: 1em 0;
+	border-style: dashed;
+	border-color: #dfdfdf;
+	border-width: 1px 0;
+	overflow: auto;
+}
+
+.pm_split_payment_case_select_and_buttons .pm_split_payment_case_select_and_btg_toggle
+{
+	float: left;
+}
+
+.pm_split_payment_case_select_and_buttons .pm_spilt_payment_button_wrapper
+{
+	float: right;
+}
+
+.pm_split_payment_case_select_and_buttons .pm_spilt_payment_button_wrapper .split_payment_button
+{
+	color: white;
+	padding: 0.6em 5em;
+	font-size: 1.3em;
+	cursor: pointer;
+
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#case_amount_select
+{
+	margin-bottom: 1em;
+}
+
+/* Sample order section */
+#sample_order_section
+{
+	border-style: dashed;
+	border-color: #dfdfdf;
+	border-width: 1px 0 0;
+	padding: 1em 0 0;
+	margin: 1em 0;
+	overflow: auto;
+}
+
+.sample_header_and_blurb
+{
+	float: left;
+}
+
+.sample_button
+{
+	float: right;
+}
+
+#sample_order_header em
+{
+	color: black;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#sample_order_blurb
+{
+	font-style: italic;
+}
+
+#sample_order_button_wrapper
+{
+	margin: 1em 0 1em;
+}
+
+#sample_order_button
+{
+	padding: 0.5em 2em;
+	text-decoration: none;
+	color: #3C3C3C;
+	border: 1px solid #7F7F7F;
+
+	-webkit-border-radius: 4px;
+        border-radius: 4px;
+
+	background: #e9e9e9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e9e9e9 0%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9e9e9), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e9e9e9 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e9e9e9 0%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e9e9e9 0%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e9e9e9 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e9e9', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
+}
+
+.sample_already_purchased
+{
+	padding: 0.5em 2em;
+	text-decoration: none;
+	color: #7f7f7f;
+	border: 1px solid #7F7F7F;
+
+	-webkit-border-radius: 4px;
+        border-radius: 4px;
+}
+
+/* Footer */
+#site_footer
+{
+	padding-top: 3em;
+	padding-bottom: 20px;
+	margin-top: -2em;
+	border-top: 10px solid #d5d5d5;
+
+	background: #5a5a5a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #5a5a5a 0%, #333333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a5a5a), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #5a5a5a 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #5a5a5a 0%,#333333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #5a5a5a 0%,#333333 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #5a5a5a 0%,#333333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5a5a', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+}
+
+#site_footer > ul
+{
+	width: 924px;
+	margin: auto;
+	overflow: auto;
+	font-size: 0.85em;
+	color: #999;
+}
+
+#site_footer h2
+{
+	padding-top: 1px;
+	font-size: 18pt;
+	text-transform: uppercase;
+	color: #999;
+}
+
+#site_footer h2 em
+{
+	color: white;
+}
+
+#site_footer > ul .widget
+{
+	float: left;
+	line-height: 1.5em;
+}
+
+#site_footer > ul .widget
+{
+	width: 675px;
+}
+
+#site_footer > ul .widget:first-child
+{
+	width: 185px;
+	margin-right: 50px;
+}
+
+#site_footer a:link,
+#site_footer a:visited
+{
+	color: white;
+	text-decoration: none;
+}
+
+#site_footer a:hover
+{
+	text-decoration: underline;
+}
+
+.sommelier_number
+{
+	color: white;
+	font-size: 2em;
+}
+
+/* Buyer dashboard */
+#bid_table
+{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9em;
+	margin-top: 3em;
+	line-height: 1.2em;
+}
+
+.my_account_headers
+{
+	overflow: auto;
+	line-height: 1.1em;
+}
+
+.my_account_headers h1
+{
+	float: left;
+}
+
+.my_account_headers h3
+{
+	float: right;
+	color: inherit;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 0.75em;
+}
+
+#bid_table_headers th
+{
+	color: #AB0C00;
+	font-weight: 700;
+	padding: 0.5em 1em;
+}
+
+#bid_table tr
+{
+	border-bottom: 1px solid #aaa;
+}
+
+#bid_table tr:nth-child(even)
+{
+	background-color: #eee;
+}
+
+#bid_table td
+{
+	padding: 0.5em 1em;
+	height: 25px;
+}
+
+#bid_table td a
+{
+	font-weight: 400;
+}
+
+#bid_table th a:link,
+#bid_table th a:visited
+{
+	color: #AB0C00;
+}
+
+.spacer_dot_gif
+{
+	width: 10px;
+	height: 7px;
+	float: right;
+}
+
+.sort_asc,
+.sort_desc,
+.bid_header:hover .spacer_dot_gif,
+.current_sort .spacer_dot_gif
+{
+	display: none;
+}
+
+.bid_header:hover .sort_desc
+{
+	display: inline;
+}
+.current_sort.asc .sort_asc
+{
+	display: inline;
+}
+
+.current_sort.asc:hover .sort_asc
+{
+	display: none;
+}
+
+.current_sort.asc:hover .sort_desc
+{
+	display: inline;
+}
+
+.current_sort.desc .sort_desc
+{
+	display: inline;
+}
+
+.current_sort.desc:hover .sort_desc
+{
+	display: none;
+}
+
+.current_sort.desc:hover .sort_asc
+{
+	display: inline;
+}
+
+.current_sort:hover .sort_desc
+{
+	display: inline;
+}
+
+.reorder_form .submit
+{
+	cursor: pointer;
+	border: 1px solid rgb(124,170,215);
+	color: white;
+
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+
+	background: #50a0d3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #50a0d3 0%, #3f8ac5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#50a0d3), color-stop(100%,#3f8ac5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #50a0d3 0%,#3f8ac5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #50a0d3 0%,#3f8ac5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #50a0d3 0%,#3f8ac5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #50a0d3 0%,#3f8ac5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50a0d3', endColorstr='#3f8ac5',GradientType=0 ); /* IE6-9 */
+}
+
+#no_bid_notifier
+{
+	text-align: center;
+	margin: 10em 0;
+}
+
+/* Single Bid */
+#bid_info header
+{
+	margin-bottom: 1em;
+}
+
+#bid_info #wine_data_title
+{
+	margin-bottom: 1em;
+}
+
+#bid_wine_srp
+{
+	color: #AB0C00;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+#bid_status
+{
+	border-bottom: 1px solid grey;
+	margin-bottom: 1em;
+}
+
+#bid_status_header
+{
+	overflow: auto;
+	color: black;
+	border-bottom: 2px solid grey;
+	padding-bottom: 0.25em;
+	position: relative;
+}
+
+#bid_status_label
+{
+	float: left;
+	color: #AB0C00;
+	font-size: 1.5em;
+}
+
+#bid_last_updated
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+.status_verbose.status_code_1,
+.status_verbose.status_code_7,
+{
+	padding: 1em 1em 1em 40px;
+	font-style: italic;
+}
+
+.status_verbose strong
+{
+	font-style: normal;
+}
+
+.status_verbose.status_code_1
+{
+	padding: 1em 1em 1em 75px;
+	min-height: 45px;
+	font-style: italic;
+}
+
+.status_verbose.status_code_1.for_buyer
+{
+	background: #d8ffc9 url('images/checkmark.gif') no-repeat 1em 1em;
+}
+
+.accept_bid_button,
+#bid_image_buttons
+{
+	font-style: normal;
+}
+
+.status_verbose.status_code_1 strong
+{
+	font-style: normal;
+}
+
+.status_verbose.status_code_1.for_seller
+{
+	background: url('images/#AB0C00-exclamation.png') 1em 0.5em no-repeat;
+	color: #AB0C00;
+}
+
+.status_verbose.status_code_2.for_seller
+{
+	background: #eee url('images/green-check.png') 5px 1em no-repeat;
+	padding: 1em 1em 1em 40px;
+}
+
+.status_verbose.status_code_2.for_seller strong
+{
+	color: black;
+}
+
+.status_verbose.status_code_7
+{
+	background: #eee url('images/gray-x.png') 5px 1em no-repeat;
+	padding: 1em 1em 1em 40px;
+}
+
+.bid_accepted_header,
+.bid_accepted_content
+{
+	padding: 1em 1em 1em 40px;
+}
+
+.bid_accepted_header
+{
+	background: #f5f9f2 url('images/green-check.png') 5px 0.5em no-repeat;
+	font-weight: bold;
+	border-bottom: 1px solid gray;
+}
+
+.bid_accepted_content
+{
+	background: url('images/#AB0C00-exclamation.png') 1em 0.5em no-repeat;
+}
+
+.bid_accepted_payment_note
+{
+	color: #AB0C00;
+	font-weight: bold;
+}
+
+.status_verbose.status_code_3,
+.status_verbose.status_code_4
+{
+	padding: 1em 1em 1em 40px;
+	background: #f5f9f2 url('images/green-check.png') 5px 0.5em no-repeat;
+}
+
+.status_verbose.status_code_3.for_seller
+{
+	background: url('images/#AB0C00-exclamation.png') 1em 0.5em no-repeat;
+	color: #AB0C00;
+}
+
+.status_verbose.status_code_4.for_seller
+{
+	padding: 0;
+	background: transparent;
+}
+
+.status_verbose.status_code_4.for_seller #send_wine_header
+{
+	padding: 1em 1em 1em 40px;
+	background: #f5f9f2 url('images/green-check.png') 5px 0.5em no-repeat;
+	border-bottom: 1px solid grey;
+}
+
+.status_verbose.status_code_4.for_seller #send_wine_address_and_button
+{
+	padding: 1em 1em 1em 40px;
+	background: url('images/#AB0C00-exclamation.png') 1em 0.5em no-repeat;
+	color: #AB0C00;
+}
+
+#send_wine_address
+{
+	color: #595959;
+}
+
+.status_verbose.status_code_5
+{
+	padding: 1em 1em 1em 40px;
+	background: url('images/#AB0C00-exclamation.png') 1em 0.5em no-repeat;
+	color: #AB0C00;
+	font-style: italic;
+}
+
+.status_verbose.status_code_5.for_seller
+{
+	background: #f5f9f2 url('images/green-check.png') 5px 0.5em no-repeat;
+	color: #595959;
+}
+
+.status_verbose.status_code_5.for_seller strong
+{
+	color: black;
+}
+
+.status_verbose.status_code_5 strong
+{
+	font-style: normal;
+}
+
+.status_verbose.status_code_6
+{
+	padding: 1em 1em 1em 40px;
+	background: #f5f9f2 url('images/green-check.png') 5px 0.5em no-repeat;
+	font-weight: bold;
+}
+
+.bid_declined_header
+{
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+.single-bid #wine_data #wine_data_title,
+.single-bid #wine_data_srp
+{
+	display: none;
+}
+
+.single-bid #wine_data_title
+{
+	padding-left: 15px;
+}
+
+.single-bid #total_feedback
+{
+	margin-left: 15px;
+}
+
+#bid_image_buttons
+{
+	display: none;
+	overflow: auto;
+	margin: 1em 0;
+}
+
+.bid_image_button
+{
+	padding: 0.5em 2.5em;
+	margin-right: 1em;
+	color: white;
+	font-size: 1.25em;
+	border: 1px solid;
+	float: left;
+	cursor: pointer;
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#accept_bid_button
+{
+	border-color: #3C9000;
+
+	background: rgb(80,221,6); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgb(80,221,6) 0%, rgb(59,144,0) 40%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(80,221,6)), color-stop(40%,rgb(59,144,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgb(80,221,6) 0%,rgb(59,144,0) 40%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgb(80,221,6) 0%,rgb(59,144,0) 40%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgb(80,221,6) 0%,rgb(59,144,0) 40%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgb(80,221,6) 0%,rgb(59,144,0) 40%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50dd06', endColorstr='#3b9000',GradientType=0 ); /* IE6-9 */
+
+}
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,0,0)), color-stop(40%,rgb(176,0,5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgb(255,0,0) 0%,rgb(176,0,5) 40%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgb(255,0,0) 0%,rgb(176,0,5) 40%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgb(255,0,0) 0%,rgb(176,0,5) 40%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgb(255,0,0) 0%,rgb(176,0,5) 40%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#b00005',GradientType=0 ); /* IE6-9 */
+
+}
+
+#bid_wine_bottle_wrapper
+{
+	text-align: center;
+}
+
+.bid_blurb
+{
+	font-style: italic;
+}
+
+/* Pages */
+.page #content header
+{
+	margin-bottom: 1em;
+}
+
+#page_content
+{
+	margin-left: 1em;
+}
+
+#page_content ul
+{
+	list-style: disc outside none;
+	margin: 2em;
+}
+
+#page_content ol
+{
+	list-style: decimal outside none;
+	margin: 2em;
+}
+
+#page_content li
+{
+	margin-bottom: 10px;
+}
+
+/* Generic stuff :( */
+.one_third,
+.two_thirds
+{
+	float: left;
+}
+
+.one_third.last,
+.two_thirds.last
+{
+	float: right;
+}
+
+.one_third
+{
+	width: 30%;
+	padding: 5px;
+}
+
+.two_thirds
+{
+	width: 60%;
+}
+
+.alert,
+.success,
+.error
+{
+	font-family: Arial, sans-serif;
+	color: black;
+	font-size: 12px;
+	padding: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.alert
+{
+	border: 1px solid #78190d;
+	background: #fbffd3 url('images/exclamation-point.gif') no-repeat 1em 1em;
+	padding-left: 50px;
+	min-height: 65px;
+}
+
+.success
+{
+	border: 1px solid #3a9000;
+	background: #d8ffc9 url('images/checkmark.gif') no-repeat 1em 1em;
+	padding-left: 75px;
+}	
+
+.address
+{
+	font-style: normal;
+}
+/* Breadcrumbs */
+.breadcrumb
+{
+	text-decoration: none;
+	margin-left: 0.25em;
+	padding-left: 13px;
+	background: transparent url('images/arrow_icon.png') no-repeat left center;
+}
+
+/* hacks */
+.gform_wrapper
+{
+	margin-top: 0 !important;
+}
+
+.gform_wrapper h3.gform_title
+{
+	margin-top: 0 !important;
+}
+
+
+
+.hidden
+{
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+}
+
+
+/* Gravity Form Hacks */
+.state_select .ginput_container
+{
+	margin: 0.5em 8em 0.5em 0;
+}
+
+#input_1_2_2
+{
+}
+
+.gform_wrapper .gsection
+{
+	margin: 4em 0 0 !important
+}
+
+.gform_wrapper .gfield_description
+{
+	padding: 0 !important;
+}
+	
+/* Dropdown */
+#menu_wrapper
+{
+	position: absolute;
+	right: 0;
+	width: 72%;
+}
+
+#wine_nav .menu-item
+{
+	position: relative;
+}
+
+#wine_nav .submenu
+{
+	background: #fff url('images/header_bg.png') bottom repeat-x;
+	position: absolute;
+	left: -9999px;
+	padding: 1em 1em 0;
+}
+
+#browse_varietals .submenu
+{
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	column-count: 3;
+	column-gap: 10px;
+	min-width: 383px;
+}
+
+#browse_price_range .submenu
+{
+	min-width: 5em;
+}
+
+#wine_nav .submenu li
+{
+	margin-bottom: 1em;
+	text-transform: capitalize;
+}
+
+#wine_nav .submenu a
+{
+	white-space: nowrap;
+}
+
+#wine_nav .submenu a:hover
+{
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+#wine_nav .menu-item:hover ul, #wine_nav .clicked .submenu
+{
+	left: 0;
+	z-index: 10;
+}
+	

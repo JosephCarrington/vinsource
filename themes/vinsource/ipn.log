@@ -1,0 +1,422 @@
+[2013-12-04 23:13 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1216
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&payment_request_date=Wed+Dec+04+15%3A12%3A56+PST+2013&return_url=http%3A%2F%2Fwww.vinsourceonline.com%2Fbeta%2Fwine%2Frobert-craig-winery%2F2008-howell-mountain-cabernet%2F&fees_payer=EACHRECEIVER&ipn_notification_url=http%3A%2F%2Fwww.vinsourceonline.com%2Fbeta%2Fwp-content%2Fthemes%2Fvinsource%2Fpaypal-ipn-listener.php&sender_email=restaurant%40vinsource.com&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-A2sAG8IYiojdJb4CjtsVCn1hv7mh&test_ipn=1&transaction%5B0%5D.id_for_sender_txn=6FT918153F343581T&transaction%5B0%5D.receiver=winery%40vinsource.com&cancel_url=http%3A%2F%2Fwww.vinsourceonline.com%2Fbeta%2Fwine%2Frobert-craig-winery%2F2008-howell-mountain-cabernet%2F&transaction%5B0%5D.is_primary_receiver=false&pay_key=AP-07F629741L3553200&action_type=PAY&transaction%5B0%5D.id=6KM36399LN290510G&transaction%5B0%5D.status=Completed&transaction%5B0%5D.paymentType=SERVICE&transaction%5B0%5D.status_for_sender_txn=Completed&transaction%5B0%5D.pending_reason=NONE&transaction_type=Adaptive+Payment+PAY&transaction%5B0%5D.amount=USD+25.55&status=COMPLETED&log_default_shipping_address_in_transaction=false&charset=windows-1252&notify_version=UNVERSIONED&reverse_all_parallel_payments_on_error=false
+[2013-12-04 23:13 UTC] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 04 Dec 2013 23:13:17 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=twHbSWnLLHg9Gdm7y-V2BBC7LwauJYpvshZEFVewATimCLt5drMxmn-RQNJOdieNjg_dRsF5LYcj6Mmb6QrCxQA-aJMQppdE2822kJcMjiKHVqysBiBtggC_E8zImrxCmLVmc842MTOho90eVn9PX4l2Y1Zvxbn_Y5bTF6-FLJZjt6msOhjkgVlYP_EcQYuL80XZ4xhpKK8yFjCunv16SmLgIwy6TwLXxH1Xg43AiOu6gCVBHRijfbkxXqC6p0sZdjWNr6Twwu_Cw-sJD47MOCzIeRQ1LYQrIaWg-FVh1nlGwagpQboe6WlA627vA2NCBflQdPqG-RXDlqhp0t8uKtGbKgPWqs7sg5vm1Yf_DcIYld1Yq5N7Uw12Vj7ID5xj4RdHM6xyIPGFBSxt5-ZgMbFmduk3sb6QsEe4yRasr-9r3ET2qmwPu_0dBQO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 02-Dec-2023 23:13:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 04-Dec-2015 23:13:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386198797585070; path=/; expires=Fri, 27-Nov-43 23:13:17 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D230137682; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386198797573892; path=/; expires=Fri, 27-Nov-43 23:13:17 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2013-12-05 04:40 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 768
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&transaction_subject=&payment_date=20%3A40%3A41+Dec+04%2C+2013+PST&txn_type=web_accept&last_name=Engel&residence_country=US&item_name=&payment_gross=375.00&mc_currency=USD&business=joseph.carrington%40gmail.com&payment_type=instant&protection_eligibility=Ineligible&verify_sign=ATxqbeQyAEndmwNkjO50M77kqifhAaW1pfG8vqfOhb2qlpKBxXlnkGgG&payer_status=verified&tax=0.00&payer_email=brenton.engel%40gmail.com&txn_id=6YJ73772L7420370H&quantity=0&receiver_email=mr.zero.g%40gmail.com&first_name=Brent&invoice=josephcarrington-0000064&payer_id=4SUUUTD7U57H6&receiver_id=L9WHKCNQSL24J&memo=0000064&item_number=&payment_status=Completed&payment_fee=11.18&mc_fee=11.18&mc_gross=375.00&custom=&charset=windows-1252&notify_version=3.7&ipn_track_id=79c89774eb771
+[2013-12-05 04:40 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Thu, 05 Dec 2013 04:40:52 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=xeDBFFYPKx1Xr_U0w6TY9q_lJBPxlFlbIG_WQKC6BpZ9LFByoRd2m7L3xp6SNEFI9Q3g4APiQMNiToyThoJGGX620jytsyEF5EyJ2eisNVqEaicEHb6iZ0locx9fZP8I4bQEg4uJWjvpF9kG94Ku9b142ZF25QvmXD5zYQnUF9TD8PtsfOAcbbL6zktAbLi5I-MNbTKBhCrTuge9V9p9ByFwLbRcfJEYYAdKttIWPTJa-vyNi9mT1_NyRYCpDbxz3wXbWW49Mp0_f7C4tdYuM_a7Kr-_3Y9EcWMhpyROO4KMi7tli1xX4LOnvEcRCsTWSbFGgfYzLGTcpBPBORUXP9SPw8Ayfy_ZppvFjb9utskO7MwdNGbuzGB8Z1U4Fb0O8bPOn6f3CwKdgoxVs3p20xgDtlMTB5BLTCDYM5RmREWDT3Y0wzBEysTxjHK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sun, 03-Dec-2023 04:40:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sat, 05-Dec-2015 04:40:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386218452542382; path=/; expires=Sat, 28-Nov-43 04:40:52 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3557007442; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386218452531389; path=/; expires=Sat, 28-Nov-43 04:40:52 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-05 04:40 UTC] Invalid IPN: cmd=_notify-validate&transaction_subject=&payment_date=20%3A40%3A41+Dec+04%2C+2013+PST&txn_type=web_accept&last_name=Engel&residence_country=US&item_name=&payment_gross=375.00&mc_currency=USD&business=joseph.carrington%40gmail.com&payment_type=instant&protection_eligibility=Ineligible&verify_sign=ATxqbeQyAEndmwNkjO50M77kqifhAaW1pfG8vqfOhb2qlpKBxXlnkGgG&payer_status=verified&tax=0.00&payer_email=brenton.engel%40gmail.com&txn_id=6YJ73772L7420370H&quantity=0&receiver_email=mr.zero.g%40gmail.com&first_name=Brent&invoice=josephcarrington-0000064&payer_id=4SUUUTD7U57H6&receiver_id=L9WHKCNQSL24J&memo=0000064&item_number=&payment_status=Completed&payment_fee=11.18&mc_fee=11.18&mc_gross=375.00&custom=&charset=windows-1252&notify_version=3.7&ipn_track_id=79c89774eb771
+[2013-12-09 16:46 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 753
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&transaction_subject=&txn_type=web_accept&payment_date=08%3A46%3A06+Dec+09%2C+2013+PST&last_name=Lipman&residence_country=US&pending_reason=echeck&item_name=&payment_gross=375.00&mc_currency=USD&business=joseph.carrington%40gmail.com&payment_type=echeck&protection_eligibility=Ineligible&verify_sign=A3a1nKXGdVr68tqqQ8tFCgXJxlpxAV5sybeLuEO4iEOZ7hXN0PzszBs3&payer_status=verified&tax=0.00&payer_email=Sami%40samilea.com&txn_id=3W5357529P985710U&quantity=0&receiver_email=mr.zero.g%40gmail.com&first_name=Samantha&invoice=josephcarrington-0000063&payer_id=BV8YM97QC7RFA&receiver_id=L9WHKCNQSL24J&memo=0000063&item_number=&payment_status=Pending&mc_gross=375.00&custom=&charset=windows-1252&notify_version=3.7&ipn_track_id=9e418f2eb51f4
+[2013-12-09 16:46 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Mon, 09 Dec 2013 16:46:12 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=wBesfB9ihz1qW1WOg8CUVW6rawqylkG0BDS9p0hOnAX26ITCsuO0wVvOI10HfDaU1jH_LitLoFr3_wz8eGLLwkEOD08d8bN-ez6dQ0mK8QVptpQEybax-JHlNbbjPP7rQM9qJXOnXpTw0bsD66rZjZYB1MmzYWSGX7GrVn7kkiEbWjy4HLLklRLyEFFn9elHt-kqF45IDa_kTF3eHC0gPDNlfvr4hHS88CYukOyZbZ-g5PHmdbdHUl5HaVhlqZN3yCqauFnYdEbSkEAfl-albTbOYgU7MTRmlgnQh7DvPipB5XUbu0xvIeq-nWsuOIZW_CiTu_OD4hHy-T_9p7HSuYEDv5Rb4ScazHLZ7S5WIDLSE6oYQt195DyehCvdWJD5udZ0cpbnKMrHzI2QmK_tZ1q_YmHyyADNV8bXy-u_a75P-ND6wKk3Vz1FMja; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 07-Dec-2023 16:46:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 09-Dec-2015 16:46:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386607572964553; path=/; expires=Wed, 02-Dec-43 16:46:12 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3572737362; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386607572955890; path=/; expires=Wed, 02-Dec-43 16:46:12 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-09 16:46 UTC] Invalid IPN: cmd=_notify-validate&transaction_subject=&txn_type=web_accept&payment_date=08%3A46%3A06+Dec+09%2C+2013+PST&last_name=Lipman&residence_country=US&pending_reason=echeck&item_name=&payment_gross=375.00&mc_currency=USD&business=joseph.carrington%40gmail.com&payment_type=echeck&protection_eligibility=Ineligible&verify_sign=A3a1nKXGdVr68tqqQ8tFCgXJxlpxAV5sybeLuEO4iEOZ7hXN0PzszBs3&payer_status=verified&tax=0.00&payer_email=Sami%40samilea.com&txn_id=3W5357529P985710U&quantity=0&receiver_email=mr.zero.g%40gmail.com&first_name=Samantha&invoice=josephcarrington-0000063&payer_id=BV8YM97QC7RFA&receiver_id=L9WHKCNQSL24J&memo=0000063&item_number=&payment_status=Pending&mc_gross=375.00&custom=&charset=windows-1252&notify_version=3.7&ipn_track_id=9e418f2eb51f4
+[2013-12-11 01:23 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 807
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=50.67&invoice=josephcarrington-0000065&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=17%3A23%3A14+Dec+10%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=1.77&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AhEqPBa2LPCE3sKdenmfssNtAsh0AvZS8z.-Cn6aUUhol8kjzU9-u4bA&payer_email=czangrilli%40yahoo.com&memo=0000065&txn_id=06A14773L7123333P&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.77&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=50.67&ipn_track_id=538f37db8ff3d
+[2013-12-11 01:23 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Wed, 11 Dec 2013 01:23:50 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=BxCMjfct2aonBiTJNkQCjymx_l50gzKp5fIHdBeM_lOcY6gIVBm6iy4_w7eLcI0N3jQy4iuPW18Gn2ewxOVC67RY39jNREEW9-dANUWQYWas9Adxh_d-Nj9VHagPq6bjLWM2Ti4Hd0l0wnq-bhgIbO-xDvSQFx3ThJkWlAk8oD9IKF3-kZwb7qGKvHJ4Ofj4yHD76ZX6UpoVS15Bg5z_4wKA3C8csjt1G9hXM_8mgykdLA1ohJOW2vT9OpJvHgcZVVU2pK-vkFvUCvGVzYlKR7LfKBTYNURHzYwmGkKiz4Dl3r3tmLPT-Bet8s7GEttY7cEgJVxTyPr59lHb0P6Ri8yEO9uaxyJ3iU_0FxFefro16yzmb-CFQLRXybi--BqGg1wTrurmtptDtj1lR-zIuFBjGbI5D7M_RfObCZFtsdhholS_JbFg3C9hVbS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-Dec-2023 01:23:51 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-Dec-2015 01:23:51 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386725031006605; path=/; expires=Fri, 04-Dec-43 01:23:51 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2797512530; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386725030997427; path=/; expires=Fri, 04-Dec-43 01:23:50 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-11 01:23 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=50.67&invoice=josephcarrington-0000065&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=17%3A23%3A14+Dec+10%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=1.77&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AhEqPBa2LPCE3sKdenmfssNtAsh0AvZS8z.-Cn6aUUhol8kjzU9-u4bA&payer_email=czangrilli%40yahoo.com&memo=0000065&txn_id=06A14773L7123333P&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.77&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=50.67&ipn_track_id=538f37db8ff3d
+[2013-12-13 01:06 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 807
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=75.49&invoice=josephcarrington-0000066&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=17%3A05%3A40+Dec+12%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=2.49&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AoS.E.01W2nV8a9ir19jmW2JxA6YApYWkRtAtevOpoiYewSRSspXqToH&payer_email=czangrilli%40yahoo.com&memo=0000066&txn_id=0EB9153807017081K&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=2.49&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=75.49&ipn_track_id=ed5376ef71214
+[2013-12-13 01:06 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Fri, 13 Dec 2013 01:06:07 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=arPXQ94h_gH-VhZnQPRcER0FBW1hBU4Hu49Fi30WKIaw5B2JfqvTvUoclMFoQpngZOGxsKho8HYCIewfB_zabu9eWPq8Cs2gWyMQWbDUhbSM4LHam68-GtTNntlkewVA6W5rUi3y_XWTGtcDOPzRhmKK5ECu0hrdb-MvKzwrxgEn0o39nTq_gerOBcWjvUZVEH6CQ-MHWiLmyjc8X8f-TrMob3qzsqtseG62TxExRdinykXpRCXhxn5it1zjgVsha_PWKJO_CJ3YGPA2hYYSVnFILZnvlqw4YXhqAYow5XBhS6ospBgtX6tOPOqZb7h6zla0OboUEdXzr1XPaLgBF3WlgvweGVtR0kSh_5eLS0hNWM_2RSXFv6WvNm6vPc3M4HtuoQ8TmPskWGdMrxQAN4bOaYj_SL9EjCk7RiDKcMFxRj_K88oYb0ld4vu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 11-Dec-2023 01:06:08 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 13-Dec-2015 01:06:08 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386896767668252; path=/; expires=Sun, 06-Dec-43 01:06:07 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2136844882; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386896767659076; path=/; expires=Sun, 06-Dec-43 01:06:07 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-13 01:06 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=75.49&invoice=josephcarrington-0000066&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=17%3A05%3A40+Dec+12%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=2.49&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AoS.E.01W2nV8a9ir19jmW2JxA6YApYWkRtAtevOpoiYewSRSspXqToH&payer_email=czangrilli%40yahoo.com&memo=0000066&txn_id=0EB9153807017081K&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=2.49&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=75.49&ipn_track_id=ed5376ef71214
+[2013-12-13 01:15 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 853
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=375.00&invoice=josephcarrington-0000063&protection_eligibility=Ineligible&payer_id=BV8YM97QC7RFA&tax=0.00&payment_date=08%3A46%3A06+Dec+09%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=Samantha&mc_fee=11.18&notify_version=3.7&echeck_time_processed=17%3A15%3A13+Dec+12%2C+2013+PST&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AFFIASYBPB4TY3B2VIHX1thDFvcyAnZBZAZQzEmdu.L-15RgFmoHvnRa&payer_email=Sami%40samilea.com&memo=0000063&txn_id=3W5357529P985710U&payment_type=echeck&last_name=Lipman&receiver_email=mr.zero.g%40gmail.com&payment_fee=11.18&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&handling_amount=0.00&transaction_subject=&payment_gross=375.00&shipping=0.00&ipn_track_id=e7284e88dd611
+[2013-12-13 01:15 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Fri, 13 Dec 2013 01:15:21 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=r6IoGgOzmdXdZCbyhGNk6voz3XBwBL4oFzN4o4-UrG0HjtrpFvgUFP6vQJJyymevRtjZVw6I28WaY_Rry6M-pjbPMoFxEo9gahjOYTmGUgqlh5EyBxdRirSc7eXdfoEEAfQEdgF74Z2DV9T3yeJuwtIp6aHZ2HVziW7CPsYxJw68JYG0COpioHErwd_CzlkYRn4Qvxi0HyyGLec52_jHhgeoK1x1JqiFaZsrfpoKB7ElDx19lBXMdkd72KiYubSPS0FbZY12f5VtEkcTFn0vdEgjcGXKt0DwamAXRPZYC9YHnmadgCRL7GO4Wp3Sv-Pstt9r2_GoGxF4f9rO1Lt7p_M-Ij2biMXfcnGpVcSmrAn_PNXauPMzP3uPNP0fGthB6dzesCLBF4pDIn0m2yTCi4SMArkLc0G44IrAlv-QmbXIM377vV_1ujA0_2O; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 11-Dec-2023 01:15:21 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 13-Dec-2015 01:15:21 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1386897321230203; path=/; expires=Sun, 06-Dec-43 01:15:21 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2841619026; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1386897321219965; path=/; expires=Sun, 06-Dec-43 01:15:21 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-13 01:15 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=375.00&invoice=josephcarrington-0000063&protection_eligibility=Ineligible&payer_id=BV8YM97QC7RFA&tax=0.00&payment_date=08%3A46%3A06+Dec+09%2C+2013+PST&payment_status=Completed&charset=windows-1252&first_name=Samantha&mc_fee=11.18&notify_version=3.7&echeck_time_processed=17%3A15%3A13+Dec+12%2C+2013+PST&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AFFIASYBPB4TY3B2VIHX1thDFvcyAnZBZAZQzEmdu.L-15RgFmoHvnRa&payer_email=Sami%40samilea.com&memo=0000063&txn_id=3W5357529P985710U&payment_type=echeck&last_name=Lipman&receiver_email=mr.zero.g%40gmail.com&payment_fee=11.18&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&handling_amount=0.00&transaction_subject=&payment_gross=375.00&shipping=0.00&ipn_track_id=e7284e88dd611
+[2013-12-26 22:44 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 859
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=200.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=14%3A43%3A40+Dec+26%2C+2013+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=6.10&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AmfPKc8ErhwUnHhkhU-JkdH-9oqCA4lqzgxnGKvN5juuranCXZ-WaYBE&payer_email=joyce%40thebiomatcompany.com&txn_id=96J77869KH008061Y&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=6.10&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=200.00&ipn_track_id=e52eecee9ec57
+[2013-12-26 22:44 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Thu, 26 Dec 2013 22:43:59 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=gpUYhhiEwmeqobNb_SJBufpOsc0i0g9cmvuHLq-GoS3KwpnN4h9fCidQLz6rRvtuxamcs0NujBOm_tZyBfJvR_UgE-70RJrqyD6G3R4e0ZEjFo9HZULasj_tmyKEh-UrsNfJufJPsL43OXEJjEsj1uiAIzPPNdigzf9tr_6sAc0HEbQ49qPUh5ElgxErL0icxXAybBNFbTxA3Kk8mF1AEC-uyphx73e6mwgkiE4EtWpzsL5wc2VAZ9YQpcJe5AeO0szqnlOFcGBQ5yzr6tYtAqO_oPvIrIf5Vpb27zvQuX75my3oJDc1nMqDi5flA_sFwOPyIsxaNusyLxKk9mVYnF_GfCVfVgX9nPWh2JarfMpTmt9D8cl3dYb_EX0R7tlujyEYdodZyaftrgULaSc2fyoJDaUmKiMXaLdCeAH8CApcf6ABedrPrKPvBF0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sun, 24-Dec-2023 22:43:59 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sat, 26-Dec-2015 22:43:59 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1388097839637299; path=/; expires=Sat, 19-Dec-43 22:43:59 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D800177234; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1388097839626515; path=/; expires=Sat, 19-Dec-43 22:43:59 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2013-12-26 22:44 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=200.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=14%3A43%3A40+Dec+26%2C+2013+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=6.10&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AmfPKc8ErhwUnHhkhU-JkdH-9oqCA4lqzgxnGKvN5juuranCXZ-WaYBE&payer_email=joyce%40thebiomatcompany.com&txn_id=96J77869KH008061Y&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=6.10&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=200.00&ipn_track_id=e52eecee9ec57
+[2014-01-03 23:26 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 857
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=50.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=15%3A26%3A13+Jan+03%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.75&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AzaPqPnGssovaJ1Pdf2waNDc8cIPAVy.dgC840pDZ.qGhiMzi9LLrfHw&payer_email=joyce%40thebiomatcompany.com&txn_id=5KH07150VP202103K&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=5568a920c4fe0
+[2014-01-03 23:26 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Fri, 03 Jan 2014 23:26:19 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=r-UoRA9-BU9ApAXI5k6S2h8sMz3ntaiyke44J4tAE3aZDMoLDb5m91kj1fSvfOdY0Mbq_jFiM8Cb04YGz_7_EiQH5V1oEHlQlT3FJP-D6xK5m4eDIU4VwbNow6p8ZegD-HrtVQvU-zIgiGcXd8TZ_QqXFpk-ypwH5Yvpsf2KoQKH8uAnpKsBEIUFqUCVkptbSQlWMIY7Mswv6KZlv86gY8Z90G6ZOwafpyebJR4_hgy_Ia1izwScPv_AqC-b80j-fAVIfj5d9ZLPu-mre43sSfakwK-ihlzUdcfMXjoKBDJuRinWpDI4oT9qDUleIdiVJI_S04A8z7Ha1Fx52PYl6YgwaWwWKx1LxYSEtP4EHmV8TbKRARzuiFpdC3YxxvKs_o0Sj8TcPYf26Aoqw0pAMSWcVsd1pYcIHyVGpfr6oxbbVQezs6UBOysyuve; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 01-Jan-2024 23:26:19 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 03-Jan-2016 23:26:19 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1388791579532230; path=/; expires=Sun, 27-Dec-43 23:26:19 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D457688914; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1388791579524103; path=/; expires=Sun, 27-Dec-43 23:26:19 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-03 23:26 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=50.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=15%3A26%3A13+Jan+03%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.75&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AzaPqPnGssovaJ1Pdf2waNDc8cIPAVy.dgC840pDZ.qGhiMzi9LLrfHw&payer_email=joyce%40thebiomatcompany.com&txn_id=5KH07150VP202103K&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=5568a920c4fe0
+[2014-01-06 01:50 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 856
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=40.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=17%3A50%3A05+Jan+05%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.46&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=ABlYq.7R2IHqQTc1kx9HVB4oCrebAqjSnx7TBm69ojtIfWcxsEQbshUs&payer_email=joyce%40thebiomatcompany.com&txn_id=7AP31667U0324030M&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.46&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=40.00&ipn_track_id=b9ff408ff29c
+[2014-01-06 01:50 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Mon, 06 Jan 2014 01:50:12 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=EY_ZQOArIkDmw27lKOCh-mfDfFm-tAg1ZOtLxOY9OTCEFt-wLuZhhnxDrjrPkvXQkeuLERMruG59zR8k66GVnk38E_Il1pv8XL3EQ3b1xuZOUtNSUnNG7snOzKevtDC6j7cfk9h3CNbNgv2B7bUkKJsZx1ZC_2r1w4gEWBXEpUWN_woRHoZZISWeQBzLj453KzKs9TAtCU7ziQ2nGkLQZxcD_Tz8R-6BvgKil5Ei5IeM6V8x3-tunK5CXWQlbP8eQsvYkP3askshzJL8oi4yPyLiGSRZcza9KXcLr88rVNeNka1QrOmAfSjrJP_xDNv3J_vZYFsqTbrM11NVq6m4SfOdzqhL50QYUYebrTLE2shRir1k-fdofz2JqNmzh0Onijoz_mTInKL4ikyskhk4FIdfG1jRXB1OriA4Am1JxWa_nVa6SSK-2Sz2Di8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 04-Jan-2024 01:50:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 06-Jan-2016 01:50:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1388973012968359; path=/; expires=Wed, 30-Dec-43 01:50:12 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3557542482; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1388973012958410; path=/; expires=Wed, 30-Dec-43 01:50:12 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-06 01:50 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=40.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=17%3A50%3A05+Jan+05%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.46&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=ABlYq.7R2IHqQTc1kx9HVB4oCrebAqjSnx7TBm69ojtIfWcxsEQbshUs&payer_email=joyce%40thebiomatcompany.com&txn_id=7AP31667U0324030M&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.46&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=40.00&ipn_track_id=b9ff408ff29c
+[2014-01-06 22:43 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 20
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate
+[2014-01-06 22:43 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Mon, 06 Jan 2014 22:43:28 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=wR2_j5-t8Ol3mGb4hNyWxwQcBOpgpa3IDEVCSv4aasCbMeUN0E1MocSfq4OynsGpsw3wk8uynF47K_3YTY4l4j2iSgwkSLnGTKqlKH84SJ6hIhgA2m1uxLo1PPE7HrAGTdrUnm4H6_F7NOZF_u66TK3m8THUyl4WiwjB1wmlFsa2YMFgnoz-a1KZ1OQ219AOAPPHqm62HDAGqWE4wiwikdZaWcCasMEEjBOmG9SqUeHdssUF0mtaAX7PIN9ZQ4kUGGDYWQxG0VtS8iARoyTHmKKxh-a0fDPEFEm9dEPWR1H9jLkBwPzwzPFk33Zi7oSCL66xeLR3MpjVLnACYUHdEWd2KevIJIF41VQKN7zd3brtGrquMEB5JdaXeDuYKp7izGtknpjWVADDyD5QNl5kVPvHJJMmgspGaV51krLRwAOQtGv-UzKOvOX3uq8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 04-Jan-2024 22:43:29 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 06-Jan-2016 22:43:29 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389048208758188; path=/; expires=Wed, 30-Dec-43 22:43:28 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2419182418; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389048208751145; path=/; expires=Wed, 30-Dec-43 22:43:28 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-06 22:43 UTC] Invalid IPN: cmd=_notify-validate
+[2014-01-06 22:44 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 20
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate
+[2014-01-06 22:44 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Mon, 06 Jan 2014 22:44:18 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=fjEc3DI1UBaYP_ymiOaTIjdHCSRsRfziM38E7mouy9pSCuZMs6m7GGuhtpYqKbrFuG4-TDV4gqieuinkzM2k3-nRhjCWvoXTaWknGzjgm8CKJXBCAckSCKfm2WsOftzPKmtaeQgxg0t69FsKVu3YS0QfuDfr6x4Lz61xLE2cuQ5w3jzBWGy4XEYAmcWhQiBTa1QzpC-DUAfsqEYyVxxFvtxfDgQz6B4teVCp2b2d4KijTALxV9h4JovFZzu4C4yRHFl4SJxaiXH2FFc5fqK_q1pILCmwXNxArb34wWxAMYhn_KCU1S1JfIqZxPAUSQlJbi7vWcFa_CcjkUY1t0refvT5FCDIg9B78pqAD8BzQv5WAGc1I5lryekqCofPmLygs73oT6deLxhE1m2IKvUMTe9Ox0DcSVyvE2WAFH5-txfvw6QBRyE0DzNoaIO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 04-Jan-2024 22:44:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 06-Jan-2016 22:44:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389048258476925; path=/; expires=Wed, 30-Dec-43 22:44:18 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3258043218; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389048258467590; path=/; expires=Wed, 30-Dec-43 22:44:18 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-06 22:44 UTC] Invalid IPN: cmd=_notify-validate
+[2014-01-07 00:46 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 20
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate
+[2014-01-07 00:46 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Tue, 07 Jan 2014 00:46:40 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=iB_s5aL0_bwQFaV4MXmS-rIgeU0kLFRr-piJoWF9gsPRMp6_ncvg26FzbtIlCMeVc-M7Oscue6z7UWrmwOfVN9AJmX58SEf4TusO1uC2khTkM8gEK2w2uHC5AwnlwlseJztEzspwRJer2SxUU3yp2Zhn2k8AzO6Rb_ydL3uII4fAKoya83vGTWgHkF_Va0OsKrmJ0IkTjMOt9DST9inBHq7JG6tV8omZiA9U2lNKIQFxmLBkqfauvF1IV-y6WKQU_7d1oCLe5IJvqkNM-wU2PBP0jsP844iHXXIiJIUInZlaeBCA_I_JanPtR0f7ouMeOUKSFZh7IgqJoSJFjFw7Rq3BVoFWNyyDBtgoJZruLmC7ih_Cy0jjg01nfA9g1-wZAAlvw_MG5BaLB5m1gypvjSIcPQ_64H5Fqb-X4S8nNIkq9eR-80_YdwCOM4y; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 05-Jan-2024 00:46:40 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 07-Jan-2016 00:46:40 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389055600529596; path=/; expires=Thu, 31-Dec-43 00:46:40 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D1884212050; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389055600519710; path=/; expires=Thu, 31-Dec-43 00:46:40 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-07 00:46 UTC] Invalid IPN: cmd=_notify-validate
+[2014-01-11 21:20 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 857
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=50.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=13%3A20%3A39+Jan+11%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.75&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AipzpiML256w9-akHONKruBmK6ovA9XSMff8.jKvuTjrsHnqsrlkitPj&payer_email=joyce%40thebiomatcompany.com&txn_id=19G84460RM962703P&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=9222060de34de
+[2014-01-11 21:20 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sat, 11 Jan 2014 21:20:49 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=vfFKF55UCjbJmEE2O3jii5z5lGSlzlRczr29cTy3Y3FmwnQG5U7iYMRmXhcIEigo-puvbaWSiOl-4WALa4WNYKcWj8kwFOeBE6r4iaxv9pISD9evmN6nQD8D_y5hUyygQJP7NCOQFxrFKF9CvSW-7aL0OJtjhe79bQF3vOvOdRJuNdChzQHZWQmBbUxM_mPgRGMoBoZlGK1O4sQiU5qbPO33wAwJ5MIKG95O4xUHWnqMD6N9Y6_LGfAu0_qtrPU2gcTSvhM39_bFdN6jkR8f5H3soPrtXMCi782sqWr2FiVOXMAX6-2Zm2Joge3SXbTF5AZefQvNt4CiUQEqn4kemSbvKFLXiz4DND9dIr84YU-q-8YpIgsdRDD4NrPxMCN9mPFSCREnFAlGuNTL9f9NRYIXLkgfMMkm41QIPwuhCR0k-ZW1_jAt2NAdYgu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Tue, 09-Jan-2024 21:20:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Mon, 11-Jan-2016 21:20:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389475249973054; path=/; expires=Mon, 04-Jan-44 21:20:49 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2981482834; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389475249964550; path=/; expires=Mon, 04-Jan-44 21:20:49 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-11 21:20 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=50.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=TZ3UW7324A8Z6&address_street=Po+Box+56&payment_date=13%3A20%3A39+Jan+11%2C+2014+PST&payment_status=Completed&charset=windows-1252&address_zip=32038&first_name=Joyce&mc_fee=1.75&address_country_code=US&address_name=Joyce+Carrington&notify_version=3.7&payer_status=verified&business=mr.zero.g%40gmail.com&address_country=United+States&address_city=Fort+White&verify_sign=AipzpiML256w9-akHONKruBmK6ovA9XSMff8.jKvuTjrsHnqsrlkitPj&payer_email=joyce%40thebiomatcompany.com&txn_id=19G84460RM962703P&payment_type=instant&last_name=Carrington&address_state=FL&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=send_money&mc_currency=USD&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=9222060de34de
+[2014-01-15 00:00 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 809
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=720.29&invoice=josephcarrington-0000067&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=16%3A00%3A27+Jan+14%2C+2014+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=21.19&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AWkT50gtrA0iXnh55b939tXXlAFYA6UFU6431y980EkMElNb3VtykT3i&payer_email=czangrilli%40yahoo.com&memo=0000067&txn_id=23H289484N534920N&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=21.19&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=720.29&ipn_track_id=d2ca916e7ff
+[2014-01-15 00:00 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Wed, 15 Jan 2014 00:00:34 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=WsCiKu2RnlBrOVB1IsHnr5t3znY6IMl12zXEYRGDFYqhb1bWjPnOVt2PZ1wTBrl4bac6sia4QQzEfBkbVEkogHcYEEVluudcNplToAmz28lfGpdf9GqN2KrR-V2PoYTKK-IKvYlrqOTJG4M8Pd2S8X3d04bakxRgbmwGr0-MpyBRPXCXj4QrKxuEstuE15MttabaFCZuJkVNwben9bmKoOFsvLfRzmVhsLCDWNXmE73T538dM2otUeP5d_LXAoZawXW6JiyNNRmqrWhbas14q6FRPrq7NNAr8tZaUrlzM7zigH_PYv5FD1Z_sxJeXurf9kBSucc5s3LgsiOR9O_dPe0NzR3fuVYSzA9P7DC6n8CXcBfbby5ZAo3lV--VPCw0qdt6yyzAgAzwHnXcqseeB1chWPeqUYX27h9iD1WV_yzf45TaygluK1liuDu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 13-Jan-2024 00:00:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 15-Jan-2016 00:00:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389744034565666; path=/; expires=Fri, 08-Jan-44 00:00:34 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2731529554; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389744034555087; path=/; expires=Fri, 08-Jan-44 00:00:34 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-15 00:00 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=720.29&invoice=josephcarrington-0000067&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=16%3A00%3A27+Jan+14%2C+2014+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=21.19&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AWkT50gtrA0iXnh55b939tXXlAFYA6UFU6431y980EkMElNb3VtykT3i&payer_email=czangrilli%40yahoo.com&memo=0000067&txn_id=23H289484N534920N&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=21.19&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=720.29&ipn_track_id=d2ca916e7ff
+[2014-01-15 00:10 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 807
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=50.00&invoice=josephcarrington-0000068&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=16%3A09%3A37+Jan+14%2C+2014+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=1.75&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AZsMAD7lpF53UaZFve4baDUmTCMDAvDJyaRb-zwidtCAcqHJ2Z9KHUnl&payer_email=czangrilli%40yahoo.com&memo=0000068&txn_id=7EK145432R4100802&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=c1586ffb91c1e
+[2014-01-15 00:10 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Wed, 15 Jan 2014 00:10:12 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=bD0Jj1jH0_y1OAXA6GjfufXpQrutePBsxPsXfs7WiPUX95Yp4VTRFoqZgqgx7rUkKL-x-q2ppzpdR-ZzZr2l7yuNSJxTOEqz6OMjxjBh7nmPK2l3HfyO56PeGX5dmW_XGV4tsu0afI8Z5alHdctFpeAD5L0h0T25Jx_cTNJn0HlYJGvkgWHTroberQQL-UFAkjBhG1Eync8CFU7aWRy_PEJXVTrRr-lJKGv4zLk8YXNxTloxfITR8Q42Q7gia-OaG4ekOh0vMgxgVsFnpSGbwLA-sRW4ehzyx7LyDujEy_si9kTZZQIwTFnmWq5QoNtC4DjFn5agVcQ3QDtyN6YVvTlsV4EjErSapn51eKUIamiLE6KYU5unxuWyad4ia-PMc_HrhMHXGaK_Cbi7QuPel382_CrvRzq3czf-oNnHDAqFK7oJV57RFOB5qCW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 13-Jan-2024 00:10:12 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 15-Jan-2016 00:10:12 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389744612564209; path=/; expires=Fri, 08-Jan-44 00:10:12 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3838956882; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389744612554131; path=/; expires=Fri, 08-Jan-44 00:10:12 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2014-01-15 00:10 UTC] Invalid IPN: cmd=_notify-validate&mc_gross=50.00&invoice=josephcarrington-0000068&protection_eligibility=Ineligible&payer_id=R5MTYJM7PWASL&tax=0.00&payment_date=16%3A09%3A37+Jan+14%2C+2014+PST&payment_status=Completed&charset=windows-1252&first_name=christie&mc_fee=1.75&notify_version=3.7&custom=&payer_status=verified&business=joseph.carrington%40gmail.com&quantity=0&verify_sign=AZsMAD7lpF53UaZFve4baDUmTCMDAvDJyaRb-zwidtCAcqHJ2Z9KHUnl&payer_email=czangrilli%40yahoo.com&memo=0000068&txn_id=7EK145432R4100802&payment_type=instant&payer_business_name=Zangrilli+Creative&last_name=zangrilli&receiver_email=mr.zero.g%40gmail.com&payment_fee=1.75&receiver_id=L9WHKCNQSL24J&txn_type=web_accept&item_name=&mc_currency=USD&item_number=&residence_country=US&transaction_subject=&payment_gross=50.00&ipn_track_id=c1586ffb91c1e

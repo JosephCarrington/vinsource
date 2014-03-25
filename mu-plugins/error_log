@@ -1,0 +1,9 @@
+[06-Jan-2014 16:29:45 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 128
+[06-Jan-2014 16:33:03 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 128
+[06-Jan-2014 16:34:17 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 155
+[06-Jan-2014 16:34:44 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 155
+[06-Jan-2014 16:36:11 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 156
+[06-Jan-2014 16:37:57 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 139
+[06-Jan-2014 16:39:49 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 156
+[06-Jan-2014 16:42:25 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/test.php on line 2
+[06-Jan-2014 16:45:46 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home3/vinsourc/public_html/beta/wp-content/mu-plugins/peer-marketplace/paypal-ipn-listener.php on line 156
