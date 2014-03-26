@@ -1,0 +1,7 @@
+cache/
+plugins/
+upgrades/
+uploads/
+w3tc-config/
+bak*
+index.php
