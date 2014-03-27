@@ -117,6 +117,9 @@ class PMTransaction
 	}
 }
 
+/**
+* An array of PMPaymentReceivers for sending money to multiple people from the same sender, using Adaptive Payments Chained Payments
+*/
 class PMPaymentReceiverList
 {
 	private $receivers;
@@ -125,11 +128,13 @@ class PMPaymentReceiverList
 
 	}
 
+	/* Add a receiver. SHould eventually do some kind of validation against PP requirements */
 	function add_receiver(PMPaymentReceiver $receiver)
 	{
 		$this->receivers[] = $receiver;
 	}
 
+	/* Returns all receivers. */
 	function get_receivers()
 	{
 		return $this->receivers;
@@ -137,6 +142,9 @@ class PMPaymentReceiverList
 }
 
 
+/**
+* A container for a  WP_User and an amount of money to send to them
+*/
 class PMPaymentReceiver
 {
 	public $WP_User;
@@ -148,13 +156,20 @@ class PMPaymentReceiver
 	}
 }
 
+/**
+* Creates the various types of payments required by Peer Marketplace.
+*/
 interface PMPaymentHandler
 {
-	// THis is the core function that creates a payment and makes the user act upon it in some way
+	/* A single payment from one sender to one reciever. */
 	function createSimplePayment(PMPaymentReceiver $receiver, PMProduct $product);
+	/* A single payment form one sender to two or more receivers */
 	function createChainedPayment(PMPaymentReceiverList $receiver_list,  PMSplitPaymentHandler $split_handler);
 }
 
+/**
+* Adds the admin setions for Peer Marketplace
+*/
 add_action('admin_init', function()
 {
 	add_settings_section('pm_core_settings', 'Peer Marketplace Settings', function()

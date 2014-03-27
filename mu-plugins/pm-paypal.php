@@ -1,4 +1,7 @@
 <?php
+/**
+* Handles everything required for creating a payment, saving it to WP, and sending the payer to PayPal to complete the transaction
+*/
 class PeerMarketplacePayPal implements PMPaymentHandler{
 	var $apiUrl;
 	var $payPalUrl;
@@ -17,6 +20,10 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 
 	function __construct()
 	{
+		/**
+		* If we are using the sandbox, make sure we use the sandbox credentials
+		TODO: add senttings page to add these credentials
+		*/
 		if(get_option('pm_paypal_use_sandbox'))
 		{
 			$this->apiUrl = 'https://svcs.sandbox.paypal.com/AdaptivePayments/';
@@ -53,6 +60,9 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 		);
 	}
 
+	/**
+	* TODO: What does this do?
+	*/
 	function getPaymentOptions($paykey)
 	{
 		$packet = array(
@@ -63,6 +73,9 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 		return $this->_paypalSend($packet, 'GetPaymentOptions');
 	}
 
+	/**
+	* Handles sending any kind of data to PayPal
+	*/
 	function _paypalSend($data, $call)
 	{
 		$ch = curl_init();
@@ -73,7 +86,9 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $this->headers);
 
-		return(json_decode(curl_exec($ch), TRUE));
+		$reply = curl_exec($ch);
+		curl_close($ch);
+		return(json_decode($reply, TRUE));
 	}
 
 	function createSimplePayment(PMPaymentReceiver $receiver, PMProduct $product)
@@ -233,6 +248,9 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 		}
 	} // End createChainedPayment
 
+	/**
+	* Handles sending the user to PayPal to complete a payment
+	*/
 	function sendUserToPayPal()
 	{
 		wp_redirect($this->payPalUrl . $this->paykey);
@@ -267,6 +285,9 @@ add_action('init', function()
 	}
 });
 
+/**
+* Extends PMTransaction to also have a PayPal Paykey
+*/
 class PMPayPalTransaction extends PMTransaction
 {
 	public $paykey;
@@ -297,6 +318,9 @@ function pm_get_seller_paypal_address($seller_id)
 	return pm_get_paypal_address($winery_users[0]->ID);
 }
 
+/** 
+* Gets the user's email from WP
+*/
 function pm_get_paypal_address($user_id)
 {
 	$user = get_userdata($user_id);
