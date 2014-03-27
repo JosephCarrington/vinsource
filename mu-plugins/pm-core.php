@@ -2,7 +2,7 @@
 /*
 *Plugin Name : Peer Marketplace : Core
 */
-
+/** TODO: Why does this have a singleton? */
 class PeerMarketplace
 {
 	private $current_transaction;
