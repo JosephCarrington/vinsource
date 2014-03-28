@@ -13,6 +13,7 @@ function vinsource_display_sample_form($product)
 	$sample_form->display_sample_form();
 }
 
+// Extends VSPRoduct to simply add a sample price
 class VSSample extends VSProduct
 {
 	function __construct($post)
@@ -59,6 +60,7 @@ class VinsourceSampleHandler
 		}
 	}
 
+	// Determines if a wone can be sampled. Makes sure that the ID's are set for the seller and buyer. Makes sure that the wine has no already been sampled by this user, makes sure that both the buyer and seller have PayPal Addresses set, and makes sure that the wine has a sample price
 	function can_be_sampled()
 	{
 		// We must have a buyer ID and a seller ID
@@ -78,6 +80,7 @@ class VinsourceSampleHandler
 		return true;
 	}
 
+	// Pulls array of all the wines that a user has sampled, and checks that array to see if this wine_id is in it
 	function has_product_been_sampled()
 	{
 		$all_sampled = pm_get_user_sampled($this->buyer_id);
@@ -85,6 +88,7 @@ class VinsourceSampleHandler
 		return in_array($this->product->ID, $all_sampled);
 	}
 
+	// Prints the form that allows a user to sample the wine, or if already sampled, prints that.
 	function display_sample_form()
 	{
 		?>
@@ -117,6 +121,7 @@ class VinsourceSampleHandler
 	}
 }
 
+// Facilitates the actual process of generating the transaction and sending the user to PayPal
 add_action('wp', function() {
 	if(get_query_var('action') == 'buy_sample' && is_singular('vs_product'))
 	{
@@ -132,13 +137,16 @@ add_action('wp', function() {
 		{
 			//db($e->getMessage());
 		}
-		$product = new VSProduct(get_queried_object());
-		$receiver_store_id = $product->seller_id;
-		$receiver_store = new VSStore(get_post($receiver_store_id));
 
+		// Creates a new VSProduct. VSProduct is just the wp_post, the price and the seller
+		$sample = new VSSample(get_queried_object());
+		$receiver_store_id = $sample->seller_id;
+
+		// Creates a new VSStore. VSStore is a PMStore plus an array of all users that can admin this store. PMStore is more or less useless for now, it just takes the post and pulls the ID for some reason
+		$receiver_store = new VSStore(get_post($receiver_store_id));
 		$all_store_receivers = $receiver_store->store_users;
 		// TODO: Do something other than just getting the first user
-		$sample = new VSSample(get_queried_object());
+
 		$receiver = new PMPaymentReceiver($all_store_receivers[0], $sample->price);
 
 		// Make the transaction post
@@ -149,22 +157,29 @@ add_action('wp', function() {
 			'post_title' => $sample->post->post_title
 		);
 
+		// Create the post in the DB
 		$transaction_post_id = wp_insert_post($transaction_post_args);
+
+		// Add all the extra meta info that we need for a transaction post to be useful
 		update_post_meta($transaction_post_id, 'pm_transaction_seller_id', $receiver_store_id);
 		update_post_meta($transaction_post_id, 'pm_transaction_product_ids', array(array($sample->ID => 'sample')));
 		update_post_meta($transaction_post_id, 'pm_transaction_amount', $sample->price);
 		update_post_meta($transaction_post_id, 'pm_transaction_type', 'sample');
 		
+		// Create a PayPal handler and create a simple payment from it
 		$paypal = new PeerMarketplacePayPal();
 		$paypal->createSimplePayment($receiver, $sample);
 
+		// Update the post with the PayPal Paykey we just got from PayPal above, as well as the cancel nonce we generated
 		update_post_meta($transaction_post_id, 'pm_transaction_paypal_paykey', $paypal->paykey);
 		update_post_meta($transaction_post_id, 'pm_transaction_cancel_nonce', $paypal->cancel_nonce);
 		
+		// Finally, send the user on their way to PayPal
 		$paypal->sendUserToPayPal();
 	}
 });
 
+// This very ugly function gets the array of products (only ever 1) from the transaction and returns the first one. This function is only used once in paypal-ipn-listener.php
 function pm_get_product_id($transaction_id)
 {
 	$product_ids = get_post_meta($transaction_id, 'pm_transaction_product_ids', true);
@@ -172,6 +187,7 @@ function pm_get_product_id($transaction_id)
 	return array_keys($product_id)[0];
 }
 
+// This equally ugly function returns the value of the first key, once again only used by paypal-ipn-listener.php
 function pm_get_transaction_type($transaction_id)
 {
 	$product_ids = get_post_meta($transaction_id, 'pm_transaction_product_ids', true);
@@ -179,12 +195,14 @@ function pm_get_transaction_type($transaction_id)
 	return array_values($product_id)[0];
 }
 
+// Gets all the sampled products by the user
 function pm_get_user_sampled($user_id)
 {
 	$all_sampled = get_user_meta($user_id, 'sampled_product_ids', true);
 	return $all_sampled;
 }
 
+// Adds a product_id  to the end of the users sampled array
 function pm_add_user_sampled($product_id, $user_id)
 {
 	$all_sampled = pm_get_user_sampled($user_id);
