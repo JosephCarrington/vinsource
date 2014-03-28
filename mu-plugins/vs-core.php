@@ -30,6 +30,7 @@ class VSStore extends PMStore
 	}
 }
 
+// Add post types
 add_action('init', function() {
 	register_post_type('vs_store', array(
 		'label' => 'Wineries',
@@ -200,6 +201,7 @@ add_action('init', function() {
 
 });
 
+// Gross Helper Function
 function vs_create_text_input($label, $name, $value, $required = false, $disabled = false)
 {
 	$return = "<label for='$name'>$label</label>";
@@ -211,6 +213,7 @@ function vs_create_text_input($label, $name, $value, $required = false, $disable
 	return $return;
 }
 
+// Extra fields for transaction post types
 function vs_transaction_meta_boxes()
 {
 	global $post;
@@ -224,6 +227,7 @@ function vs_transaction_meta_boxes()
 	echo vs_create_text_input('Closed', 'pm_transaction_close_date', get_post_meta($post->ID, 'pm_transaction_close_date', true), false, true);
 }
 
+// Allows the admin to select which winery produces a wine
 function vs_wine_seller_meta_boxes()
 {
 	global $post;
@@ -260,6 +264,7 @@ function vs_wine_seller_meta_boxes()
 	<?php
 }
 
+// Extra fields for wine post types.
 function vs_wine_info_meta_boxes()
 {
 	global $post;
@@ -281,6 +286,7 @@ function vs_wine_info_meta_boxes()
 	<?php
 }
 
+// The different prices for different case amounts
 function vs_case_meta_boxes()
 {
 	global $post;
@@ -316,6 +322,7 @@ function vs_case_meta_boxes()
 	<?php
 }
 
+// A bunch of extra stuff for wineries. THe current admin user for that winery, whether or not the winery has a valid PayPal address, as well as contact info required for the restaurant.
 function vs_winery_info_meta_boxes()
 {
 	global $post;
@@ -387,6 +394,7 @@ function vs_winery_info_meta_boxes()
 }
 
 
+// Saves all the extra fields we just added
 add_action('save_post', 'vs_save_custom_meta');
 function vs_save_custom_meta($post_id)
 {
@@ -438,9 +446,9 @@ add_filter('user_contactmethods', function($user_contact)
 	unset($user_contact['jabber']);
 	return $user_contact;
 });
+
 // Each winery must have at least one user
 // TODO: add winery main user picker
-
 add_action('edit_user_profile', 'vs_extra_profile_fields');
 function vs_extra_profile_fields($user)
 {
@@ -546,6 +554,7 @@ function vs_extra_profile_fields($user)
 	}
 }
 
+// Save the extra info required for each buyer
 add_action('edit_user_profile_update', 'vs_save_extra_profile_fields');
 function vs_save_extra_profile_fields($user_id)
 {
@@ -616,6 +625,7 @@ add_action('dashboard_glance_items', function() {
 	}
 });
 
+// Adds all the extra columns in the various post type admin screens
 add_filter('manage_vs_product_posts_columns', function($column)
 {
 	$column['winery'] = 'Winery';
@@ -749,6 +759,9 @@ add_filter('request', function($vars)
 	return $vars;
 });
 
+// End the extra columns in the admin screens
+
+// Prints the discount table
 add_action('pm_under_split_payment_form_header', function(VSProduct $product)
 {
 	$prices = get_post_meta($product->ID, 'vs_product_prices', true);
@@ -785,10 +798,11 @@ add_action('pm_under_split_payment_form_header', function(VSProduct $product)
 	<?php
 });
 
+// Makes the browe pages show all the wines.
+// TODO: Paginate this
 add_action('pre_get_posts', function($query) {
 	if(!is_admin() && $query->is_main_query() && is_post_type_archive('vs_transaction'))
 	{
-		//$query->set('post_status', array('publish', 'draft'));
 		$query->set('posts_per_page', -1);
 	}
 });
