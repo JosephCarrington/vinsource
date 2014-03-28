@@ -123,6 +123,7 @@ class PMSplitPaymentHandler
 				</ul>
 			</fieldset>
 		</form><!-- .pm_split_payment_form -->
+		<?php do_action('peer_marketplace_after_split_payment_form', $this->product); ?>
 		<?php
 	}
 }

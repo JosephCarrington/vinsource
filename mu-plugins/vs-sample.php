@@ -2,6 +2,7 @@
 /**
 * Plugin Name: Vinsource : Buy Sample
 * Description : A vinsource extension that allows a user to buy a sample of a product at a different price.
+* Version: 0.2
 */
 
 add_action('peer_marketplace_after_product_info', 'vinsource_display_sample_form', 10, 1);
