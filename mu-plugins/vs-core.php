@@ -3,6 +3,7 @@
 * Plugin Name: Vinsource Core
 */
 
+/** Extends PMProduct to use the VS nomenclature **/
 class VSProduct extends PMProduct
 {
 	public $price;
@@ -16,11 +17,12 @@ class VSProduct extends PMProduct
 	}
 }
 
+/** Extends PMStore to include users attached to this winery as admins **/
 class VSStore extends PMStore
 {
 	public $store_users;
 
-	function __construct($post)
+	function __construct(WP_Post $post)
 	{
 		parent::__construct($post);
 		$this->store_users = get_users(array(
