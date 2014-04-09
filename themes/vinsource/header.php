@@ -44,6 +44,16 @@
 <body <?php body_class(); ?>>
 <div id='site_header_wrapper'>
 	<header id='site_header'>
+	<?php if(is_home())
+	{
+		?>
+		<a id='home_login_link' href='<?php echo wp_login_url(); ?>' title='Already registered? Log in.'>Already registered? Log in.</a>
+		<?php
+
+	}
+	else
+	{
+		?>
 		<a id='logo' href='<?php bloginfo('url'); ?>' title='Vinsource home'><img src='<?php bloginfo('stylesheet_directory'); ?>/images/logo.png' alt='Logo' /></a>
 		<div id='menu_wrapper'>
 			<?php 
@@ -61,11 +71,13 @@
 				get_template_part('accountnav');
 			?>
 		</div><!-- #menu_wrapper -->
+		<?php
+	}
+	?>
 	</header><!-- #site_header -->
 </div><!-- #site_header_wrapper -->
 <?php
-	if(is_home()) get_template_part('slides');
-	else if(is_post_type_archive('wine') || is_tax()) get_template_part('browse_banner');
+	if(is_post_type_archive('wine') || is_tax()) get_template_part('browse_banner');
 	else if(is_singular(array('vs_product', 'bid')) || is_post_type_archive('bid') || is_archive() || is_singular('post')) get_template_part('wine_banner');
 	else get_template_part('banner');
 ?>

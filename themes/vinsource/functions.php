@@ -35,21 +35,6 @@ function vs_init()
 
 	register_nav_menu('header', 'Site Header');
 	register_nav_menu('buyer', 'Logged In Buyers');
-	register_sidebar(array(
-		'name' => 'How It Works',
-		'id' => 'how_it_works',
-		'description' => 'On the front page, under the latest blog post',
-		'before_title' => '<span>',
-		'after_title' => '</span>',
-		'before_widget' => '<div>',
-		'after_widget' => '</div>'
-	));
-
-	register_sidebar(array(
-		'name' => 'Front Page Sidebar',
-		'id' => 'front_sidebar',
-		'description' => 'To the right of the front page blog post'
-	));
 
 	register_sidebar(array(
 		'name' => 'Site Footer',
@@ -87,16 +72,16 @@ function vs_init()
 		'description' => 'Typically, at the vey bottom of the content area on the browse page',
 	));
 
-	register_post_type('slide', array(
-		'label' => 'Slides',
-		'show_ui' => true,
-		'supports' => array(
-			'title',
-			'editor',
-			'thumbnail',
-			'custom-fields',
-			'page-attributes'
-		)
+	register_sidebar(array(
+		'name' => 'Front Page : Under Logo',
+		'id' => 'front_page_under_logo',
+		'description' => 'On the front page, under the logo, before the account creation buttons'
+	));
+
+	register_sidebar(array(
+		'name' => 'Front Page : Under Account Creation',
+		'id' => 'front_page_under_account_creation',
+		'description' => 'On the front page, under the account creation buttons'
 	));
 
 	// Redirect users to different pages on login if a redirect has not been set
@@ -210,11 +195,6 @@ function vs_logic($query)
 			}
 		break;
 		}
-	}
-
-	if(!is_admin() && $query->is_home() && $query->is_main_query())
-	{
-		$query->set('posts_per_page', '1');
 	}
 
 	if(!is_admin() && $query->is_post_type_archive('vs_product') && $query->is_main_query())
@@ -350,83 +330,6 @@ class LoggedInTextWidget extends WP_Widget {
 	}
 }
 
-
-class HowItWidgets extends WP_Widget
-{
-	function HowItWidgets()
-	{
-		parent::__construct( false, 'How It Works Section' );
-	}
-
-	function widget($args, $instance)
-	{
-		extract( $args );
-		$title = apply_filters( 'widget_title', $instance['title'] );
-
-		echo $before_widget;
-		?>
-		<ul class='HIW_area'>
-			<li class='HIW_image'>
-				<?php if(!empty($instance['image'])) echo "<img src='" . $instance['image'] . "' />" ;?>
-				<?php if ( ! empty( $title ) ) echo $before_title . $title . $after_title; ?>
-			</li><!-- .HIW_image -->
-			<li class='HIW_blurb'>
-				<?php if(!empty($instance['description'])) echo $instance['description']; ?>
-			</li><!-- .HIW_blurb -->
-		</ul><!-- .HIW_area -->
-		<?php
-		echo $after_widget;	
-	}
-
-	function update($new_instance, $old_instance)
-	{
-		$instance = array();
-		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['image'] = strip_tags( $new_instance['image'] );
-		$instance['description'] = $new_instance['description'];
-
-		return $instance;
-	}
-
-	function form($instance)
-	{
-		if ( isset( $instance[ 'title' ] ) ) {
-			$title = $instance[ 'title' ];
-		}
-		else {
-			$title = '';
-		}
-		if ( isset( $instance[ 'image' ] ) ) {
-			$image = $instance[ 'image' ];
-		}
-		else {
-			$image = '';
-		}
-		if ( isset( $instance[ 'description' ] ) ) {
-			$description = $instance[ 'description' ];
-		}
-		else {
-			$description = '';
-		}
-
-		?>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" type="text" value="<?php echo esc_attr( $image ); ?>" />
-		</p>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:' ); ?></label> 
-		<textarea class="widefat" rows='16' columns='20' id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>"><?php echo esc_attr( $description ); ?></textarea>
-		</p>
-
-		<?php 
-	}
-}
-
 class logMeIn extends WP_Widget
 {
 	function logMeIn()
@@ -508,7 +411,6 @@ class browseWines extends WP_Widget
 function vinsource_widgets()
 {
 	register_widget('LoggedInTextWidget');
-	register_widget('HowItWidgets');
 	register_widget('logMeIn');
 	register_widget('browseWines');
 }
@@ -520,7 +422,6 @@ add_action('widgets_init', 'vinsource_widgets');
 add_action('wp_enqueue_scripts', 'vinsource_scripts');
 function vinsource_scripts()
 {
-	wp_enqueue_script('cycle', get_template_directory_uri() . '/js/cycle.js', array('jquery'));
 	wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery'));
 
 	wp_register_script('browse', get_template_directory_uri() . '/js/browse.js', array('jquery'));
@@ -552,13 +453,6 @@ function vinsource_scripts()
 	if(is_singular(array('vs_product', 'bid'))) wp_enqueue_script('bid', get_template_directory_uri() . '/js/bid.js', array('jquery'));
 }
 
-// Custom backend functions
-add_action('admin_enqueue_scripts', 'vinsource_admin_scripts');
-function vinsource_admin_scripts()
-{
-	wp_enqueue_script('reminder', get_template_directory_uri() . '/js/reminder.js', array('jquery'));
-}
-
 // Ajax Callbacks
 add_action('wp_ajax_browse', 'browse_callback');
 add_action('wp_ajax_nopriv_browse', 'browse_callback');
@@ -567,7 +461,6 @@ add_action('wp_ajax_wine_info', 'wine_info_callback');
 add_action('wp_ajax_nopriv_wine_info', 'wine_info_callback');
 function browse_callback()
 {
-	//wp_mail('joseph.carrington@gmail.com', 'Browsing at VS', var_export($_GET, true));
 	if(!is_numeric($_GET['wineryID'])) die('There was an error, please reload the page and try again');
 	global $wpdb;
 
