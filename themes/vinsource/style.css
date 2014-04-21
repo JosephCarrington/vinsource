@@ -204,12 +204,6 @@ h3
 	line-height: 1.25em;
 }
 
-#front_news,
-#how_it_works
-{
-	margin-bottom: 2em;
-}
-
 #content header,
 .gform_title
 {
@@ -222,18 +216,6 @@ h3
 
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-}
-
-header em
-{
-}
-
-#front_news aside,
-.blog_excerpt_date,
-#single_blog_date
-{
-	margin: 1em;
-	color: #999;
 }
 
 .blog_excerpt p,
@@ -1728,13 +1710,161 @@ input:-ms-input-placeholder {
 {
 	font-style: normal;
 }
-/* Breadcrumbs */
-.breadcrumb
+/* Front Page */
+.home #content
 {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.home #site_header_wrapper
+{
+	background: white;
+}
+
+#home_login_link
+{
+	float: right;
+	position: relative;
+	top: 25px;
+	font-style: oblique;
+	font-size: 0.9em;
+}
+
+.home #content
+{
+	text-align: center;
+	padding: 1em 0;
+}
+
+#home_vinsource_logo
+{
+	margin: auto auto 2em;
+	display: block;
+}
+
+.home h1
+{
+	font-family: Serif;
+	font-size: 2em;
+	color: black;
+	font-weight: bold;
+}
+
+#front_page_under_sidebar li
+{
+	margin-bottom: 1.5em;
+}
+
+#create_accounts
+{
+	overflow: auto;
+}
+
+#create_accounts li
+{
+	display: inline-block;
+	width: 45%;
+}
+
+#create_winery_account,
+#create_buyer_account
+{
+	padding: 2.5em 0;
+	display: block;
 	text-decoration: none;
-	margin-left: 0.25em;
-	padding-left: 13px;
-	background: transparent url('images/arrow_icon.png') no-repeat left center;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 90%;
+	margin: 1em auto;
+
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+}
+
+#create_winery_account:link,
+#create_winery_account:visited,
+#create_buyer_account:link,
+#create_buyer_account:visited
+{
+	color: white;
+
+	background: #3e70be; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3e70be 0%, #2351a2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e70be), color-stop(100%,#2351a2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3e70be 0%,#2351a2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3e70be 0%,#2351a2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3e70be 0%,#2351a2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3e70be 0%,#2351a2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e70be', endColorstr='#2351a2',GradientType=0 ); /* IE6-9 */
+
+}
+
+#registration_forms > li
+{
+	border-top: 1px solid #eaeaea;
+	text-align: center;
+	display: none;
+}
+
+.home form
+{
+	text-align: center !important;
+}
+
+.home .gform_footer
+{
+	text-align: center;
+}
+
+.home .gfield_label
+{
+	font-weight: 400 !important;
+	color: black !important;
+}
+
+#registration_forms .widgettitle
+{
+	background: transparent url('images/border_arrow.png') no-repeat top center;
+	position: relative;
+	margin-top: -1px;
+	color: #334fa5;
+	font-size: 2.5em;
+	font-weight: bold;
+	padding-top: 1em;
+}
+
+#registration_forms input
+{
+	background-color: #efefef;
+	border: 1px solid #eaeaea;
+	padding: 0.5em;
+	width: 40%;
+}
+
+#registration_forms input.button
+{
+	padding: 0.5em 2em;
+	color: white;
+	background-color: #3c6cbb;
+	width: auto;
+	font-size: 1.5em !important;
+}
+	
+#site_description_wrapper
+{
+	border-top: 1px solid #eaeaea;
+	margin-top: 2em;
+}
+
+#site_description
+{
+	background: transparent url('images/border_arrow.png') no-repeat top center;
+	position: relative;
+	margin:  -1px auto 0;
+	padding-top: 2em;
+	width: 75%;
+	font-size: 1.5em;
 }
 
 /* hacks */
@@ -1743,12 +1873,20 @@ input:-ms-input-placeholder {
 	margin-top: 0 !important;
 }
 
+.home .gform_wrapper
+{
+	max-width: 100% !important;
+}
+
 .gform_wrapper h3.gform_title
 {
 	margin-top: 0 !important;
 }
 
-
+.home .gform_confirmation_message_2
+{
+	margin-bottom: 50px;
+}
 
 .hidden
 {

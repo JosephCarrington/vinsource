@@ -1,5 +1,12 @@
 jQuery(document).ready(function($) {
 
+	$('#create_winery_account, #create_buyer_account').click(function(e)
+	{
+		var destination = $(this).attr('href');
+		$('#registration_forms > li').css('display', 'none');
+		$(destination).css('display', 'block');
+	});
+
 	$('#browse_varietals > a, #browse_price_range > a, #browse_location > a').click(function(e)
 	{
 		e.preventDefault();
@@ -8,7 +15,6 @@ jQuery(document).ready(function($) {
 		$(this).parent().toggleClass('clicked');
 			
 	});
-	$('#slides').cycle();
 	$('#register').hover(function() {
 		$('#register img').attr('src', 'http://www.vinsourceonline.com/beta/wp-content/themes/vinsource/images/register_arrow_hover.png');	
 	},

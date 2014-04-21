@@ -47,7 +47,7 @@
 	<?php if(is_home())
 	{
 		?>
-		<a id='home_login_link' href='<?php echo wp_login_url(); ?>' title='Already registered? Log in.'>Already registered? Log in.</a>
+		<a id='home_login_link' href='<?php echo wp_login_url(); ?>' title='Already registered? Log in.'>Already registered? Log in here.</a>
 		<?php
 
 	}

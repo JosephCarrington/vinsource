@@ -84,6 +84,12 @@ function vs_init()
 		'description' => 'On the front page, under the account creation buttons'
 	));
 
+	register_sidebar(array(
+		'name' => 'Registration Forms',
+		'id' => 'registration_forms',
+		'description' => 'The forms for new users to register'
+	));
+
 	// Redirect users to different pages on login if a redirect has not been set
 	add_action('wp_login', 'vs_login', 10, 2);
 
