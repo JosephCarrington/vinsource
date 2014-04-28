@@ -428,7 +428,13 @@ add_action('widgets_init', 'vinsource_widgets');
 add_action('wp_enqueue_scripts', 'vinsource_scripts');
 function vinsource_scripts()
 {
-	wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery'));
+	if(is_home()) 
+	{
+		wp_enqueue_script('scrollTo', get_template_directory_uri() . '/js/scrollTo.js', array('jquery'));
+		wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery', 'scrollTo'));
+	}
+	else 
+		wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery'));
 
 	wp_register_script('browse', get_template_directory_uri() . '/js/browse.js', array('jquery'));
 	wp_localize_script('browse', 'ajaxurl', admin_url('admin-ajax.php'));
@@ -457,6 +463,7 @@ function vinsource_scripts()
 	if(is_post_type_archive('vs_product') || is_tax()) wp_enqueue_script('browse');
 
 	if(is_singular(array('vs_product', 'bid'))) wp_enqueue_script('bid', get_template_directory_uri() . '/js/bid.js', array('jquery'));
+
 }
 
 // Ajax Callbacks

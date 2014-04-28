@@ -1863,8 +1863,10 @@ input:-ms-input-placeholder {
 	position: relative;
 	margin:  -1px auto 0;
 	padding-top: 2em;
-	width: 75%;
-	font-size: 1.5em;
+	width: 60%;
+	font-size: 18px;
+	color: #2c2c2c;
+	line-height: 1.2em;
 }
 
 /* hacks */

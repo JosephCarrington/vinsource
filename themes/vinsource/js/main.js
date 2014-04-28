@@ -2,9 +2,11 @@ jQuery(document).ready(function($) {
 
 	$('#create_winery_account, #create_buyer_account').click(function(e)
 	{
+		e.preventDefault();
 		var destination = $(this).attr('href');
 		$('#registration_forms > li').css('display', 'none');
 		$(destination).css('display', 'block');
+		$(destination).ScrollTo();
 	});
 
 	$('#browse_varietals > a, #browse_price_range > a, #browse_location > a').click(function(e)
