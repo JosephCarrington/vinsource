@@ -65,11 +65,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Type */
-html
-{
-	background-color: #333;
-}
-
 body
 {
 	font-family: 'Arial', sans-serif;
@@ -321,35 +316,6 @@ input:-moz-placeholder {
 }
 input:-ms-input-placeholder {
     color:    #595959;
-}
-
-#loginform p
-{
-	margin-bottom: 0;
-}
-
-.login-remember
-{
-	overflow: auto;
-	margin: 0.5em 0;
-	font-size: 0.9em;
-}
-
-#login #rememberme
-{
-	float: left;
-	width: auto;
-	padding: 0;
-	margin: 0 0.5em 0.5em 0;
-	border: 1px solid #c1c1c1;
-	background-color: #acacac;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-}
-
-#login label
-{
-	color: white;
 }
 
 #register h3,
@@ -1739,7 +1705,7 @@ input:-ms-input-placeholder {
 
 #home_vinsource_logo
 {
-	margin: auto auto 2em;
+	margin: auto auto 5em;
 	display: block;
 }
 
@@ -1758,37 +1724,44 @@ input:-ms-input-placeholder {
 
 #create_accounts
 {
-	overflow: auto;
 }
 
 #create_accounts li
 {
 	display: inline-block;
-	width: 45%;
+	width: 40%;
 }
 
-#create_winery_account,
-#create_buyer_account
+
+#create_accounts li:last-child
 {
-	padding: 2.5em 0;
-	display: block;
-	text-decoration: none;
-	font-size: 1.5em;
-	font-weight: bold;
-	width: 90%;
-	margin: 1em auto;
-
-	-webkit-border-radius: 30px;
-	border-radius: 30px;
+	width: 36%;
 }
 
-#create_winery_account:link,
-#create_winery_account:visited,
-#create_buyer_account:link,
-#create_buyer_account:visited
+#create_accounts select
+{
+	font-size: 1.75em;
+	padding: 0.33em 2.33em 0.33em 0.33em;
+	color: #595959;
+	border: 1px solid #595959;
+	background: transparent url('images/front_account_arrow.png') no-repeat 95% 65%;
+
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+#create_accounts a
 {
 	color: white;
+	text-decoration: none;
+	font-size: 1.75em;
+	font-weight: bold;
+	padding: 0.5em 0.5em 0.4em;
+	display: block;
 
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	background: #3e70be; /* Old browsers */
 	background: -moz-linear-gradient(top,  #3e70be 0%, #2351a2 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e70be), color-stop(100%,#2351a2)); /* Chrome,Safari4+ */
@@ -1802,7 +1775,6 @@ input:-ms-input-placeholder {
 
 #registration_forms > li
 {
-	border-top: 1px solid #eaeaea;
 	text-align: center;
 	display: none;
 }
@@ -1825,21 +1797,21 @@ input:-ms-input-placeholder {
 
 #registration_forms .widgettitle
 {
-	background: transparent url('images/border_arrow.png') no-repeat top center;
 	position: relative;
-	margin-top: -1px;
 	color: #334fa5;
 	font-size: 2.5em;
 	font-weight: bold;
 	padding-top: 1em;
 }
 
-#registration_forms input
+#registration_forms input,
+#front_login input
 {
 	background-color: #efefef;
 	border: 1px solid #eaeaea;
 	padding: 0.5em;
 	width: 40%;
+	font-size: 16px;
 }
 
 #registration_forms input.button
@@ -1849,8 +1821,64 @@ input:-ms-input-placeholder {
 	background-color: #3c6cbb;
 	width: auto;
 	font-size: 1.5em !important;
+	border: 1px solid #2351a2;
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 	
+#front_login
+{
+	width: 40%;
+	margin: auto;
+	text-align: left;
+}
+
+.home #front_login form
+{
+	text-align: left !important;
+}
+
+#front_login label
+{
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#front_login .login-remember input
+{
+	width: auto;
+}
+
+#front_login input
+{
+	width: 97%;
+}
+
+#front_login #wp-submit
+{
+	width: auto;
+	padding: 0.5em 2em;
+	border: 1px solid gray;
+
+	background: #eaeaea; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eaeaea 0%, #c9c9c9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#c9c9c9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eaeaea 0%,#c9c9c9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eaeaea 0%,#c9c9c9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eaeaea 0%,#c9c9c9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #eaeaea 0%,#c9c9c9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+
+}
+#front_login h2
+{
+	color: #595959;
+	font-weight: bold;
+	padding-top: 2.5em;
+}
+
 #site_description_wrapper
 {
 	border-top: 1px solid #eaeaea;

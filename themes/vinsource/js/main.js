@@ -1,12 +1,52 @@
 jQuery(document).ready(function($) {
 
-	$('#create_winery_account, #create_buyer_account').click(function(e)
+	$('#already_registered').on('click', function(e)
 	{
 		e.preventDefault();
-		var destination = $(this).attr('href');
+		$('#front_login').show();
+		$('#already_registered').addClass('hidden');
 		$('#registration_forms > li').css('display', 'none');
-		$(destination).css('display', 'block');
-		$(destination).ScrollTo();
+	});
+	
+	$('#create_account').click(function(e)
+	{
+		e.preventDefault();
+		var destination = $('#account_type').val();
+		if(destination == 0)
+		{
+			alert('Please select an account type.');
+		}
+		else
+		{
+			var destination_id = '';
+			switch(destination)
+			{
+			case 'winery':
+				destination_id = '#gform_widget-2';
+			break;
+			case 'retail':
+				destination_id = '#gform_widget-3';
+			break;
+			}
+			if(destination == 'events')
+			{
+				$('#front_login').show();
+				$('#already_registered').addClass('hidden');
+				$('#registration_forms > li').css('display', 'none');
+				var fancyContent = $('#paypal_link_info').html();
+				$.fancybox({
+					content : fancyContent
+				});
+			}
+			else
+			{
+				$('#front_login').hide();
+				$('#already_registered').removeClass('hidden');
+				$('#registration_forms > li').css('display', 'none');
+				$(destination_id).css('display', 'block');
+				$(destination_id).ScrollTo();
+			}
+		}
 	});
 
 	$('#browse_varietals > a, #browse_price_range > a, #browse_location > a').click(function(e)
@@ -26,17 +66,21 @@ jQuery(document).ready(function($) {
 
 	if(supports_input_placeholder())
 	{
-		$('.login-username label').hide();
-		$('.login-username input').attr('placeholder', 'Username');
-		$('.login-password label').hide();
-		$('.login-password input').attr('placeholder', 'Password');
+		if(!$('body').hasClass('home'))
+		{
+			$('.login-username label').hide();
+			$('.login-username input').attr('placeholder', 'Username');
+			$('.login-password label').hide();
+			$('.login-password input').attr('placeholder', 'Password');
+		}
 	}
 
-	$('.login-submit input').addClass('hidden');
+	/*$('.login-submit input').addClass('hidden');
 	$('.login-submit').append("<div id='submit'></div>");
 	$('#submit').on('click', function() {
 		$('#loginform').submit();
 	});
+	*/
 
 	$('.show_discount_button').on('click', function(e)
 	{

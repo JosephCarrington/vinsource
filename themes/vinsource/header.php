@@ -46,9 +46,6 @@
 	<header id='site_header'>
 	<?php if(is_home())
 	{
-		?>
-		<a id='home_login_link' href='<?php echo wp_login_url(); ?>' title='Already registered? Log in.'>Already registered? Log in here.</a>
-		<?php
 
 	}
 	else
@@ -57,7 +54,6 @@
 		<a id='logo' href='<?php bloginfo('url'); ?>' title='Vinsource home'><img src='<?php bloginfo('stylesheet_directory'); ?>/images/logo.png' alt='Logo' /></a>
 		<div id='menu_wrapper'>
 			<?php 
-			wp_nav_menu(array('theme_location' => 'header'));
 			if(current_user_can('add_bid'))
 			{
 				get_template_part('winenav');

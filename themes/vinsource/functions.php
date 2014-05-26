@@ -13,6 +13,27 @@ function vs_security_check()
 			auth_redirect();
 		}
 	}
+
+	// Redirect away from home page if user is logged in
+	if(is_user_logged_in() && is_front_page())
+	{
+		if(current_user_can('seller'))
+		{
+			wp_redirect(vs_get_dash());
+			exit;
+		}
+		elseif(current_user_can('purchase_products'))
+		{
+			wp_redirect(get_post_type_archive_link('vs_product'));
+			exit;
+		}
+		elseif(current_user_can('administrator'))
+		{
+			wp_redirect(get_post_type_archive_link('vs_product'));
+			exit;
+		}
+
+	}
 }
 
 add_action('init', 'vs_init');
@@ -128,6 +149,7 @@ function vs_login($user_login, $user)
 		}
 		elseif(user_can($user->ID, 'buyer'))
 		{
+			die('test');
 			wp_redirect(get_post_type_archive_link('vs_product'));
 			exit;
 		}
@@ -137,6 +159,7 @@ function vs_login($user_login, $user)
 		}
 	}
 }
+
 // Add custom VinSource logo instead of WP logo
 add_action('login_head', 'vs_login_head');
 function vs_login_head()
@@ -346,6 +369,7 @@ class logMeIn extends WP_Widget
 	function widget($args, $instance)
 	{
 		extract($args);
+		echo $before_widget;
 		?>
 		<?php if(!is_user_logged_in())
 		{
@@ -372,6 +396,7 @@ class logMeIn extends WP_Widget
 			</div><!-- .logout_section -->
 			<?php
 		}
+		echo $after_widget;
 	}
 
 	function update($new_instance, $old_instance)
@@ -383,6 +408,40 @@ class logMeIn extends WP_Widget
 	{
 
 	}
+}
+
+class frontLogMeIn extends WP_Widget
+{
+	function frontLogMeIn()
+	{
+		parent::__construct(false, 'Front Page : Log Me In');
+	}
+
+	function widget($args, $instance)
+	{
+		extract($args);
+		echo $before_widget;
+		?>
+			<div id='front_login'>
+				<h2>Log me in:</h2>
+				<?php wp_login_form(); ?>
+				<a href="<?php echo wp_lostpassword_url( get_bloginfo('url') ); ?>" title="Lost Password">Lost Your Password?</a>
+
+			</div>
+		<?php
+		echo $after_widget;
+	}
+
+	function update($new_instance, $old_instance)
+	{
+		return $new_instance;
+	}
+
+	function form($instance)
+	{
+
+	}
+
 }
 
 class browseWines extends WP_Widget
@@ -418,6 +477,7 @@ function vinsource_widgets()
 {
 	register_widget('LoggedInTextWidget');
 	register_widget('logMeIn');
+	register_widget('frontLogMeIn');
 	register_widget('browseWines');
 }
 
@@ -431,10 +491,15 @@ function vinsource_scripts()
 	if(is_home()) 
 	{
 		wp_enqueue_script('scrollTo', get_template_directory_uri() . '/js/scrollTo.js', array('jquery'));
-		wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery', 'scrollTo'));
+		wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery', 'scrollTo', 'fancybox'));
+		wp_enqueue_script('fancybox', get_template_directory_uri() . '/lib/fancybox/source/jquery.fancybox.js?v=2.1.5', array('jquery'));
+		wp_enqueue_style('fancybox_style', get_template_directory_uri() . '/lib/fancybox/source/jquery.fancybox.css?v=2.1.5');
 	}
 	else 
 		wp_enqueue_script('vinsource', get_template_directory_uri() . '/js/main.js', array('jquery'));
+
+	if(is_post_type_archive('vs_product'))
+		wp_enqueue_script('cycle', get_template_Directory_uri() . '/js/cycle.js', array('jquery'));
 
 	wp_register_script('browse', get_template_directory_uri() . '/js/browse.js', array('jquery'));
 	wp_localize_script('browse', 'ajaxurl', admin_url('admin-ajax.php'));
