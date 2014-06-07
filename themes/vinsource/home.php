@@ -25,7 +25,7 @@
 <div class='hidden' id='paypal_link_info'>
 	<h2>Event Registration</h2>
 	<p>A one-time fee of $50 gets you access to our fine selection of wines, wine advice from our sommeliers, and prices way below retail.</p>
-	<p><a id='paypal_event_link'>Sounds great, sign me up!</a></p>
+	<p><a id='paypal_event_link' href='<?php echo add_query_arg('action', 'purchase_event_pass'); ?>'>Sounds great, sign me up!</a></p>
 	<p><a id='cancel_event_link' href='<?php bloginfo('url'); ?>'>Cancel</a></p>
 </div><!-- #paypal_link_info -->
 <?php get_footer(); ?>

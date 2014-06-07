@@ -655,7 +655,7 @@ function wine_info_callback()
 		elseif(current_user_can('add_bid', array('wine_id', $wine->ID)))
 		{
 			?>
-			<a id='bid_button' href='<?php echo get_permalink($wine->ID); ?>' title='Place a bid'><h3>Purchase Direct</h3><img src='<?php bloginfo('stylesheet_directory'); ?>/images/blue-arrow.png' alt='Purchase Direct' /></a>
+			<a id='bid_button' href='<?php echo get_permalink($wine->ID); ?>' title='Buy now'><h3>Buy Now</h3><img src='<?php bloginfo('stylesheet_directory'); ?>/images/blue-arrow.png' alt='Purchase Direct' /></a>
 			<?php
 		}
 		else
@@ -708,8 +708,11 @@ function print_wine_data($wine)
 					$prices = get_post_meta($wine->ID, 'vs_product_prices');
 					$case_price = $prices[0]['regular'][1];
 					$display_price = '$' . number_format($case_price, 2);
+					$bottle_price = $case_price / 12;
+					$display_price .= '/' . number_format($bottle_price, 2);
 					?>
-					<em><?php echo $display_price; ?></em> PER CASE
+					<p class='price_breakdown'><em><?php echo $display_price; ?></em>(MSRP)</p>
+					<p class='price_info'>PER CASE/BOTTLE</p>
 				</li>
 				<li class='wine_case_price_discount_tag'>
 					<?php

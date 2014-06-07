@@ -294,35 +294,142 @@ function vs_case_meta_boxes()
 	global $post;
 	$case_prices = get_post_meta($post->ID, 'vs_product_prices');
 	$case_prices = $case_prices[0];
+
+	$discount_percents = get_post_meta($post->ID, 'vs_product_discount_percents');
+	$discount_percents = $discount_percents[0];
 	?>
-	<table>
-		<tr>
-			<th></th>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-			<th>5+</th>
-			<th>10+</th>
-		</tr>
-		<tr>
-			<th scope='row'>Regular</th>
-			<td><input name='case_price[regular][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][1]; ?>' /></td>
-			<td><input name='case_price[regular][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][2]; ?>' /></td>
-			<td><input name='case_price[regular][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][3]; ?>' /></td>
-			<td><input name='case_price[regular][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][5]; ?>' /></td>
-			<td><input name='case_price[regular][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][10]; ?>' /></td>
-		</tr>
-		<tr>
-			<th scope='row'>BTG</th>
-			<td><input name='case_price[btg][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][1]; ?>' /></td>
-			<td><input name='case_price[btg][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][2]; ?>' /></td>
-			<td><input name='case_price[btg][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][3]; ?>' /></td>
-			<td><input name='case_price[btg][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][5]; ?>' /></td>
-			<td><input name='case_price[btg][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][10]; ?>' /></td>
-		</tr>
-	</table>
+	<fieldset>
+		<legend>Restaurant Prices</legend>
+		<table class='widefat'>
+			<tr>
+				<th></th>
+				<th>1</th>
+				<th>2</th>
+				<th>3+</th>
+				<th>5+</th>
+				<th>10+</th>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Discount Percent</th>
+				<td><input name='discount_percent[restaurant][1]' type='number' required min='1' step='1' value='<?php echo $discount_percents['restaurant'][1]; ?>' /></td>
+				<td><input name='discount_percent[restaurant][2]' type='number' required min='1' step='1' value='<?php echo $discount_percents['restaurant'][2]; ?>' /></td>
+				<td><input name='discount_percent[restaurant][3]' type='number' required min='1' step='1' value='<?php echo $discount_percents['restaurant'][3]; ?>' /></td>
+				<td><input name='discount_percent[restaurant][5]' type='number' required min='1' step='1' value='<?php echo $discount_percents['restaurant'][5]; ?>' /></td>
+				<td><input name='discount_percent[restaurant][10]' type='number' required min='1' step='1' value='<?php echo $discount_percents['restaurant'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Case Price</th>
+				<td><input name='case_price[regular][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][1]; ?>' /></td>
+				<td><input name='case_price[regular][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][2]; ?>' /></td>
+				<td><input name='case_price[regular][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][3]; ?>' /></td>
+				<td><input name='case_price[regular][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][5]; ?>' /></td>
+				<td><input name='case_price[regular][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['regular'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>BTG Discount</th>
+				<td><input name='discount_percent[btg][1]' type='number' required min='1' step='1' value='<?php echo $discount_percents['btg'][1]; ?>' /></td>
+				<td><input name='discount_percent[btg][2]' type='number' required min='1' step='1' value='<?php echo $discount_percents['btg'][2]; ?>' /></td>
+				<td><input name='discount_percent[btg][3]' type='number' required min='1' step='1' value='<?php echo $discount_percents['btg'][3]; ?>' /></td>
+				<td><input name='discount_percent[btg][5]' type='number' required min='1' step='1' value='<?php echo $discount_percents['btg'][5]; ?>' /></td>
+				<td><input name='discount_percent[btg][10]' type='number' required min='1' step='1' value='<?php echo $discount_percents['btg'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>BTG</th>
+				<td><input name='case_price[btg][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][1]; ?>' /></td>
+				<td><input name='case_price[btg][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][2]; ?>' /></td>
+				<td><input name='case_price[btg][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][3]; ?>' /></td>
+				<td><input name='case_price[btg][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][5]; ?>' /></td>
+				<td><input name='case_price[btg][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['btg'][10]; ?>' /></td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<legend>Retail Prices</legend>
+		<table class='widefat'>
+			<tr>
+				<th></th>
+				<th>1</th>
+				<th>2</th>
+				<th>3+</th>
+				<th>5+</th>
+				<th>10+</th>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Discount Percent</th>
+				<td><input name='discount_percent[retail][1]' type='number' required min='1' step='1' value='<?php echo $discount_percents['retail'][1]; ?>' /></td>
+				<td><input name='discount_percent[retail][2]' type='number' required min='1' step='1' value='<?php echo $discount_percents['retail'][2]; ?>' /></td>
+				<td><input name='discount_percent[retail][3]' type='number' required min='1' step='1' value='<?php echo $discount_percents['retail'][3]; ?>' /></td>
+				<td><input name='discount_percent[retail][5]' type='number' required min='1' step='1' value='<?php echo $discount_percents['retail'][5]; ?>' /></td>
+				<td><input name='discount_percent[retail][10]' type='number' required min='1' step='1' value='<?php echo $discount_percents['retail'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Case Price</th>
+				<td><input name='case_price[retail][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['retail'][1]; ?>' /></td>
+				<td><input name='case_price[retail][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['retail'][2]; ?>' /></td>
+				<td><input name='case_price[retail][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['retail'][3]; ?>' /></td>
+				<td><input name='case_price[retail][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['retail'][5]; ?>' /></td>
+				<td><input name='case_price[retail][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['retail'][10]; ?>' /></td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<legend>Event Prices</legend>
+		<table class='widefat'>
+			<tr>
+				<th>Event Prices</th>
+				<th>1</th>
+				<th>2</th>
+				<th>3+</th>
+				<th>5+</th>
+				<th>10+</th>
+			</tr>
+			<tr>
+				<th scope='row'>Event Discount Percent</th>
+				<td><input name='discount_percent[event][1]' type='number' required min='1' step='1' value='<?php echo $discount_percents['event'][1]; ?>' /></td>
+				<td><input name='discount_percent[event][2]' type='number' required min='1' step='1' value='<?php echo $discount_percents['event'][2]; ?>' /></td>
+				<td><input name='discount_percent[event][3]' type='number' required min='1' step='1' value='<?php echo $discount_percents['event'][3]; ?>' /></td>
+				<td><input name='discount_percent[event][5]' type='number' required min='1' step='1' value='<?php echo $discount_percents['event'][5]; ?>' /></td>
+				<td><input name='discount_percent[event][10]' type='number' required min='1' step='1' value='<?php echo $discount_percents['event'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Event Case Price</th>
+				<td><input name='case_price[event][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['event'][1]; ?>' /></td>
+				<td><input name='case_price[event][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['event'][2]; ?>' /></td>
+				<td><input name='case_price[event][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['event'][3]; ?>' /></td>
+				<td><input name='case_price[event][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['event'][5]; ?>' /></td>
+				<td><input name='case_price[event][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['event'][10]; ?>' /></td>
+			</tr>
+			<tr>
+				<th scope='row'>Standard Event Bottle Price</th>
+				<td><input name='case_price[event_bottle][1]' type='number' required min='1' step='1' value='<?php echo $case_prices['event_bottle'][1]; ?>' /></td>
+				<td><input name='case_price[event_bottle][2]' type='number' required min='1' step='1' value='<?php echo $case_prices['event_bottle'][2]; ?>' /></td>
+				<td><input name='case_price[event_bottle][3]' type='number' required min='1' step='1' value='<?php echo $case_prices['event_bottle'][3]; ?>' /></td>
+				<td><input name='case_price[event_bottle][5]' type='number' required min='1' step='1' value='<?php echo $case_prices['event_bottle'][5]; ?>' /></td>
+				<td><input name='case_price[event_bottle][10]' type='number' required min='1' step='1' value='<?php echo $case_prices['event_bottle'][10]; ?>' /></td>
+			</tr>
+		</table>
+	</fieldset>
 	<?php
 }
+
+// Styling the above fields
+add_action('admin_head', function()
+{
+	?>
+	<style type='text/css'>
+		
+		#vs_case_meta_boxes input[type='number']
+		{
+			max-width: 75px;
+		}
+
+		#vs_case_meta_boxes table
+		{
+			margin-bottom: 1em;
+		}
+	</style>
+	<?php
+});
 
 // A bunch of extra stuff for wineries. THe current admin user for that winery, whether or not the winery has a valid PayPal address, as well as contact info required for the restaurant.
 function vs_winery_info_meta_boxes()
@@ -418,6 +525,7 @@ function vs_save_custom_meta($post_id)
 		$meta['vs_wine_info_price'] = $_POST['vs_wine_info_price'];
 		$meta['vs_wine_info_sample_price'] = $_POST['vs_wine_info_sample_price'];
 		$meta['vs_product_prices'] = $_POST['case_price'];
+		$meta['vs_product_discount_percents'] = $_POST['discount_percent'];
 	break;
 	
 	 case 'vs_store' :

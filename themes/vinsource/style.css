@@ -701,6 +701,23 @@ input:-ms-input-placeholder {
 	margin-right: 1em;
 }
 
+.wine_case_price_no_discount
+{
+	background-color: #e0e0e0;
+	padding: 1em;
+}
+
+.wine_case_price_no_discount p
+{
+	margin-bottom: 0;
+}
+
+.wine_case_price_no_discount .price_info
+{
+	margin-top: 2px;
+	font-size: 12px;
+}
+
 .single .wine_title
 {
 	color: black;
@@ -723,8 +740,12 @@ input:-ms-input-placeholder {
 #wine_data .wine_case_price em
 {
 	color: black;
+}
+
+#wine_data .wine_case_price .price_breakdown
+{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 #wine_data_description,

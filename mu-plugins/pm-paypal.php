@@ -100,11 +100,19 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 		);
 		
 		// Create pay request
-		$this->cancel_nonce = wp_create_nonce('cancel_transaction');
-		$cancel_args = array(
-			'action' => 'cancel_transaction',
-			'cancel_nonce' => $this->cancel_nonce
-		);
+		if(is_user_logged_in())
+		{
+			$this->cancel_nonce = wp_create_nonce('cancel_transaction');
+			$cancel_args = array(
+				'action' => 'cancel_transaction',
+				'cancel_nonce' => $this->cancel_nonce
+			);
+		}
+
+		else
+			$cancel_args = array(
+				'action' => 'cancel_transaction'
+			);
 
 		$cancel_url = add_query_arg($cancel_args, get_permalink($product->ID));
 		$createPacket = array(
@@ -251,6 +259,7 @@ class PeerMarketplacePayPal implements PMPaymentHandler{
 	/**
 	* Handles sending the user to PayPal to complete a payment
 	*/
+
 	function sendUserToPayPal()
 	{
 		wp_redirect($this->payPalUrl . $this->paykey);
