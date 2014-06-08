@@ -875,7 +875,7 @@ add_filter('request', function($vars)
 add_action('pm_under_split_payment_form_header', function(VSProduct $product)
 {
 	$prices = get_post_meta($product->ID, 'vs_product_prices', true);
-	// for prices description see http://cl.ly/image/0Z213k432n1t
+	$discount_percents = get_post_meta($product->ID, 'vs_product_discount_percents', true);
 	?>
 	<table id='discount_table' class='vs_bulk_prices'>
 		<tr class='vs_bulk_price_headers_header'>
@@ -889,21 +889,170 @@ add_action('pm_under_split_payment_form_header', function(VSProduct $product)
 			<th>5+</th>
 			<th>10+</th>
 		</tr>
-		<tr>
-			<th scope='row'>Regular</th>
-			<?php foreach($prices['regular'] as $case_amount => $price_per_case) {
-				echo "<td>$" . number_format($price_per_case, 2) . "</td>";
-			}
+		<?php
+		if(current_user_can('buyer'))
+		{
 			?>
-		</tr>
-		<tr>
-			<th scope='row'>BTG</th>
-			<?php foreach($prices['btg'] as $case_amount => $price_per_case) {
-				echo "<td>$" . number_format($price_per_case, 2) . "</td>";
-			}
-			?>
-		</tr>
+			<tr>
+				<th scope='row'>Regular</th>
 
+				<?php foreach($prices['regular'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>DISCOUNT</th>
+				<?php foreach($discount_percents['restaurant'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>BTG</th>
+				<?php foreach($prices['btg'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>DISCOUNT</th>
+				<?php foreach($discount_percents['btg'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+		<?php
+		}
+		elseif(current_user_can('events'))
+		{
+			?>
+			<tr>
+				<th scope='row'>Per Case</th>
+
+				<?php foreach($prices['events'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>Per Bottle</th>
+
+				<?php foreach($prices['event_bottle'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>DISCOUNT</th>
+				<?php foreach($discount_percents['event'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<?php
+		}
+		elseif(current_user_can('retail'))
+		{
+			?>
+			<tr>
+				<th scope='row'>Per Case</th>
+
+				<?php foreach($prices['retail'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>DISCOUNT</th>
+				<?php foreach($discount_percents['retail'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<?php
+		}
+		elseif(current_user_can('seller') OR current_user_can('editor') OR current_user_can('administrator'))
+		{
+			?>
+			<tr>
+				<th scope='row'>Restaurant Regular</th>
+
+				<?php foreach($prices['regular'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>Restaurant DISCOUNT</th>
+				<?php foreach($discount_percents['restaurant'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>BTG</th>
+				<?php foreach($prices['btg'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>BTG DISCOUNT</th>
+				<?php foreach($discount_percents['btg'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>Events Per Case</th>
+
+				<?php foreach($prices['event'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>Events Per Bottle</th>
+
+				<?php foreach($prices['event_bottle'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>Events DISCOUNT</th>
+				<?php foreach($discount_percents['event'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'>Retail Per Case</th>
+
+				<?php foreach($prices['retail'] as $case_amount => $price_per_case) {
+					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
+				}
+				?>
+			</tr>
+			<tr>
+				<th scope='row'><i class='discount_icon'></i>Retail DISCOUNT</th>
+				<?php foreach($discount_percents['retail'] as $discount_percent)
+				{
+					echo "<td>" . $discount_percent . '%' . "</td>";
+				}
+				?>
+			</tr>
+			<?php
+		}
+		?>
 	</table>
 	<?php
 });
