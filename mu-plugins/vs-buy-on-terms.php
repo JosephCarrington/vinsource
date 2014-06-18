@@ -9,7 +9,7 @@ add_action('peer_marketplace_after_split_payment_form', function($product)
 	$store = new VSStore(get_post($product->seller_id));
 	$terms_users = vs_get_terms_users($store);
 
-	if(in_array(get_current_user_id(), $terms_users))
+	if(is_array($terms_users) && in_array(get_current_user_id(), $terms_users))
 	{
 		// The user may buy on terms, print a link to allow them to do so
 		$terms_nonce = wp_create_nonce('buy_on_terms');

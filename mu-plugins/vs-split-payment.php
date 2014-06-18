@@ -92,7 +92,14 @@ class PMSplitPaymentHandler
 		<form class='pm_split_payment_form' action='<?echo add_query_arg('action', 'buy_cases'); ?>' method='POST'>
 			<input type='hidden' name='buy_case_nonce' value='<?php echo wp_create_nonce('buy_case_nonce'); ?>' />
 			<ul class='pm_split_payment_header'>
-				<li class='case_amount'><em>$<?php echo number_format($bulk_prices['regular'][1], 2); ?></em> PER CASE</li>
+				<?php
+					$case_price_to_use = '';
+
+					if(current_user_can('buyer')) $case_price_to_use = 'regular';
+					if(current_user_can('retail')) $case_price_to_use = 'retail';
+					if(current_user_can('events')) $case_price_to_use = 'event';
+				?>
+				<li class='case_amount'><em>$<?php echo number_format($bulk_prices[$case_price_to_use][1], 2); ?></em> PER CASE</li>
 				<li class='show_discount_wrapper'><a href='#discount_table' class='show_discount_button'><img src='<?php bloginfo('stylesheet_directory');?>/images/tag-show_discounts.png' alt='Show Discounts' /></a></li>
 			</ul>
 			<?php do_action('pm_under_split_payment_form_header', $this->product); ?>
@@ -112,9 +119,12 @@ class PMSplitPaymentHandler
 									?>
 								</select>
 							</li>
+							<?php if(current_user_can('buyer'))
+							{ ?>
 							<li>
 								<input type='checkbox' name='btg_placement' id='btg_placement' /><label for='btg_placement'>BTG PLACEMENT</label>
 							</li>
+							<?php } ?>
 						</ul>
 					</li>
 					<li class='pm_spilt_payment_button_wrapper'>

@@ -218,7 +218,7 @@ function vs_logic($query)
 			}
 		break;
 		case 'vs_product' :
-			if(!current_user_can('administrator') && !current_user_can('editor') && !current_user_can('buyer') && !current_user_can('seller'))
+			if(!current_user_can('administrator') && !current_user_can('editor') && !current_user_can('buyer') && !current_user_can('seller') && !current_user_can('retail') && !current_user_can('events'))
 			{
 				wp_die("You do not have permission to view this page. <a href='" . get_bloginfo('url') . "' title='return home'>Return home.</a>" );
 			}

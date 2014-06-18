@@ -932,7 +932,7 @@ add_action('pm_under_split_payment_form_header', function(VSProduct $product)
 			<tr>
 				<th scope='row'>Per Case</th>
 
-				<?php foreach($prices['events'] as $case_amount => $price_per_case) {
+				<?php foreach($prices['event'] as $case_amount => $price_per_case) {
 					echo "<td>$" . number_format($price_per_case, 2) . "</td>";
 				}
 				?>
