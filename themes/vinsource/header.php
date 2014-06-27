@@ -54,7 +54,7 @@
 		<a id='logo' href='<?php bloginfo('url'); ?>' title='Vinsource home'><img src='<?php bloginfo('stylesheet_directory'); ?>/images/logo.png' alt='Logo' /></a>
 		<div id='menu_wrapper'>
 			<?php 
-			if(current_user_can('add_bid'))
+			if(current_user_can('buyer') || current_user_can('events') || current_user_can('retail'))
 			{
 				get_template_part('winenav');
 			}

@@ -95,7 +95,7 @@ class PMSplitPaymentHandler
 				<?php
 					$case_price_to_use = '';
 
-					if(current_user_can('buyer')) $case_price_to_use = 'regular';
+					if(current_user_can('buyer') OR current_user_can('administrator') OR current_user_can('editor')) $case_price_to_use = 'regular';
 					if(current_user_can('retail')) $case_price_to_use = 'retail';
 					if(current_user_can('events')) $case_price_to_use = 'event';
 				?>

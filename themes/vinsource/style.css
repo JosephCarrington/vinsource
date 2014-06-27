@@ -185,9 +185,15 @@ h3
 	background: white;
 	position: relative;
 	z-index: 4;
+	overflow: auto;
 
 	-webkit-box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.3);
         box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home #content
+{
+	overflow: none;
 }
 
 #left_wrapper,
@@ -1010,6 +1016,15 @@ input:-ms-input-placeholder {
 .vs_bulk_prices th[scope=row]
 {
 	text-align: right;
+}
+
+i.discount_icon
+{
+	display: block;
+	float: left;
+	background: url('images/vinsource-leaf-small.png') no-repeat center;
+	width: 1em;
+	height: 1em;
 }
 
 .pm_split_payment_case_select_and_buttons

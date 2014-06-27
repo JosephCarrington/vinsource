@@ -652,7 +652,7 @@ function wine_info_callback()
 		{
 
 		}
-		elseif(current_user_can('add_bid', array('wine_id', $wine->ID)))
+		elseif(current_user_can('buyer') || current_user_can('events') || current_user_can('retail'))
 		{
 			?>
 			<a id='bid_button' href='<?php echo get_permalink($wine->ID); ?>' title='Buy now'><h3>Buy Now</h3><img src='<?php bloginfo('stylesheet_directory'); ?>/images/blue-arrow.png' alt='Purchase Direct' /></a>
